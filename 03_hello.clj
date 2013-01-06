@@ -8,5 +8,5 @@
 ; use the newly imported namespace
 (def new_string (string/replace "Hello World" "World" "Nico"))
 
-; print
+; print the string
 (println new_string)
