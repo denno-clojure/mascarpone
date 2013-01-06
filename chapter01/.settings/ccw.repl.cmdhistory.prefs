@@ -1,0 +1,2 @@
+cmdhistory=[";; Switching to sample.core namespace" "(defn helloworld\\n  [name]\\n  (println \\"Hello, \\" name))"]
+eclipse.preferences.version=1
