@@ -21,6 +21,7 @@
   :scala-source-path "src/scala"
   ; force scala to run before doing anything
   :prep-tasks ["scalac" "javac"]
+  
   ; declare all your dependencies here
   :dependencies [
     [org.clojure/clojure "1.4.0"]
