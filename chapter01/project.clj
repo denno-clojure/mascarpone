@@ -11,14 +11,16 @@
   ; some dependencies you do not want to see them everywhere
   :profiles {:dev {:dependencies [
       [com.cemerick/pomegranate "0.0.13"]]}}
-  ; path for java sources
-  :java-source-path "src/java"
-  :javac-options ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
+
+  ; pure java settings
+  :java-source-paths ["src/java"]
+  :javac-opts ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
+  :compile-path "target/classes"
 
   ; path for scala sources
   :scala-source-path "src/scala"
   ; force scala to run before doing anything
-  :prep-tasks ["scalac"]
+  :prep-tasks ["scalac" "javac"]
   ; declare all your dependencies here
   :dependencies [
     [org.clojure/clojure "1.4.0"]
