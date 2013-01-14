@@ -6,6 +6,8 @@
   ; any kind of license you want to specify
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  ; so we can write plugins inside the project
+  :eval-in-leiningen true
   ; the namespace that will be loaded when lein repl starts
   :main sample.core
   ; some dependencies you do not want to see them everywhere
@@ -24,6 +26,7 @@
 
   ; declare all your dependencies here
   :dependencies [
+    [jark "0.4.3-clojure-1.5.0-alpha5" :exclusions [org.clojure]]
     [org.clojure/clojure "1.4.0"]
     [org.scala-lang/scala-library "2.9.1"]
     [cheshire "5.0.1"]
