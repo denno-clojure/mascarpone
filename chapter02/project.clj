@@ -13,6 +13,12 @@
   	; http kit, websockets
   	[me.shenfeng/http-kit "2.0-SNAPSHOT"]
 
-    ; incanter
+    ; statistics
     [incanter "1.3.0"]
+
+    ; graph 
+    [lacij "0.7.1"]
+
+    [seesaw "1.4.2"]
+    [com.github.insubstantial/substance "7.1"]
   ])
