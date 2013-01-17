@@ -19,6 +19,17 @@
     ; graph 
     [lacij "0.7.1"]
 
+    ; UI
     [seesaw "1.4.2"]
     [com.github.insubstantial/substance "7.1"]
+
+    ; xml parsing
+    [org.clojars.kyleburton/clj-xpath "1.4.0"]
+
+    ; html parsing
+    [clojure-soup "0.0.1"]
+
+    ; templating
+    [enlive "1.0.1"]
+    
   ])
