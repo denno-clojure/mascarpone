@@ -11,5 +11,8 @@
   	[colorize "0.1.1"]
 
   	; http kit, websockets
-  	[me.shenfeng/http-kit "1.3-SNAPSHOT"]
+  	[me.shenfeng/http-kit "2.0-SNAPSHOT"]
+
+    ; incanter
+    [incanter "1.3.0"]
   ])
