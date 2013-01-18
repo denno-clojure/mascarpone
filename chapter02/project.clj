@@ -32,4 +32,15 @@
     ; templating
     [enlive "1.0.1"]
     
+    ; docjure
+    [dk.ative/docjure "1.6.0"]
+
+    ; emails
+    [com.draines/postal "1.9.2"]
+
+    ; dns
+    [com.brweber2/clj-dns "0.0.2"]  
+
+    ; clostache
+    [de.ubercode.clostache/clostache "1.3.1"] 
   ])
