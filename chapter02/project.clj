@@ -43,4 +43,19 @@
 
     ; clostache
     [de.ubercode.clostache/clostache "1.3.1"] 
+
+    ; csv
+    [clojure-csv "2.0.0-alpha2"]
+
+    ; RSS
+    [clj-rss "0.1.2"]
+
+    ; growl
+    [clj-growlnotify "0.1.1"]
+
+    ; JSON
+    [cheshire "5.0.1"]
+
+    ; digest
+    [digest "1.3.0"]
   ])

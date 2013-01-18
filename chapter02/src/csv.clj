@@ -11,7 +11,7 @@
 ; Longer example on how to convert a CSV list of people
 ; to vcard format
 ;
-(defn l[o]
+(defn parse-line[o]
 (let [
 	tel_or_email (get o 3)
 	is_email (re-find #"@" tel_or_email)
@@ -27,7 +27,8 @@
 
 (use 'clostache.parser)
 
-; not all field are there, this depends on your own implementation
+; template to convert a record to vcard format
+; using only a few fields for this demonstration.
 (defn vcard
   "Converts the intermal map representation into a format meeting the vCard specification"
   [record]
@@ -41,10 +42,10 @@ EMAIL;TYPE=PREF:{{email}}
 END:VCARD
 " record))
 
-; now the core of the work
+; now to the core of the work
 ; 1 line to parse the csv file
 (def ppl (slurp "src/contacts.csv"))
 ; 1 line to convert each line to a vcard
-(def vcards (map #(vcard (l %)) (parse-csv ppl)))
+(def vcards (map #(vcard (parse-line %)) (parse-csv ppl)))
 
 (spit "contacts.vcf" (apply str vcards))
