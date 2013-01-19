@@ -58,4 +58,10 @@
 
     ; digest
     [digest "1.3.0"]
+
+    ; terminal
+    [clojure-lanterna "0.9.2"]
+
+    ; time
+    [clj-time "0.4.5-SNAPSHOT"]
   ])
