@@ -3,12 +3,12 @@
 (use 'opennlp.nlp)
 (use 'opennlp.treebank) ; treebank chunking, parsing and linking lives here
 
-(def get-sentences (make-sentence-detector "code/en-sent.bin"))
-(def tokenize (make-tokenizer "code/en-token.bin"))
-(def detokenize (make-detokenizer "code/english-detokenizer.xml"))
-(def pos-tag (make-pos-tagger "code/en-pos-maxent.bin"))
-(def name-find (make-name-finder "code/namefind/en-ner-person.bin"))
-(def chunker (make-treebank-chunker "code/en-chunker.bin"))
+(def get-sentences (make-sentence-detector "models/en-sent.bin"))
+(def tokenize (make-tokenizer "models/en-token.bin"))
+(def detokenize (make-detokenizer "models/english-detokenizer.xml"))
+(def pos-tag (make-pos-tagger "models/en-pos-maxent.bin"))
+(def name-find (make-name-finder "models/namefind/en-ner-person.bin"))
+(def chunker (make-treebank-chunker "models/en-chunker.bin"))
 
 (pprint (chunker (pos-tag (tokenize "The override system is meant to deactivate the accelerator when the brake pedal is pressed."))))
 

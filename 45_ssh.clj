@@ -16,7 +16,7 @@
 
 (use 'clj-ssh.ssh)
 (let [agent (ssh-agent {:use-system-ssh-agent false})]
-  (add-identity agent "/user/name/.ssh/id_rsa_five")
+  (add-identity agent {:private-key "/user/name/.ssh/id_rsa_five"})
   (let [session (session agent host :username user {:strict-host-key-checking :no})]))
 
 

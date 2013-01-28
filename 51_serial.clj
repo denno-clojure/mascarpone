@@ -6,6 +6,12 @@
 ; list ports
 (list-ports)
 
+; 0 : /dev/tty.Bluetooth-PDA-Sync
+; 1 : /dev/cu.Bluetooth-PDA-Sync
+; 2 : /dev/tty.Bluetooth-Modem
+; 3 : /dev/cu.Bluetooth-Modem
+
+
 ; open the port
 (def port (open "/dev/tty.HUAWEIMobile-Pcui"))
 
