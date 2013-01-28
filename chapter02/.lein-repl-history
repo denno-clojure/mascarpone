@@ -48,3 +48,47 @@
 (netz/run network [0 0])
 (netz/run network [0 1])
 (netz/run network [1 1])
+(load-file "src/infer.clj")
+(doc "infer")
+(doc infer)
+(doc 'infer)
+(use 'infer.uniclass)
+(use '[infer.uniclass])
+(use 'infer.uniclass)
+(use 'infer.core)
+(diff-vec {:a 1 :c 1} {:b 1 :a -0.4})
+(load-file "src/shake.clj")
+(uname -a)
+(sh/uname -a)
+(def a (sh/uname -a))
+a
+(print (slurp (input-stream (sh/uname -a))))
+(use 'clojure.java.io)
+(print (slurp (input-stream (sh/uname -a))))
+(def a (slurp (input-stream (sh/uname -a))))
+(sh/ps -axj)
+(input-stream (sh/ps -axj))
+(slurp (input-stream (sh/ps -axj)))
+(print (slurp (input-stream (sh/uname -a))))
+sh/input-stream
+input-stream
+(input-stream (sh/ls -al))
+(sh/ls -al
+)
+(alter-var-root (var sh/*print-output*) (fn[_] false))
+(sh/ls -al)
+(def un (slurp (input-stream (sh/uname -a)))))
+(def un (slurp (input-stream (sh/uname -a))))
+un
+(load-file "src/timely.clj")
+; create a schedule to repeat every minute
+(def item (scheduled-item
+            (each-minute)
+            (test-print-fn "Scheduled using start-schedule")))
+; start the item
+(def sched-id (start-schedule item))
+; sleep for a minute
+(Thread/sleep (* 1000 60 2))
+; stop the item
+(end-schedule sched-id)
+(load-file "src/hiccup.clj")

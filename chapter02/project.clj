@@ -98,4 +98,11 @@
 
     ; neural network
     [netz "0.1.1"]
+
+    ; shell commands
+    [shake "0.2.1"]
+
+    ; timers
+    [factual/timely "0.0.3"]
+    
   ])
