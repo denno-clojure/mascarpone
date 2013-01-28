@@ -92,3 +92,73 @@ un
 ; stop the item
 (end-schedule sched-id)
 (load-file "src/hiccup.clj")
+(load-file "src/at_at.clj")
+(System/in)
+(SimpleCalcParser/main [])
+(SimpleCalcParser/main (as-array []))
+(SimpleCalcParser/main (to-array []))
+(SimpleCalcParser/main (into-array String []))
+(SimpleCalcParser/main (into-array String ["source.txt"]))
+(SimpleCalcParser/main (into-array String ["antlr.txt"]))
+(SimpleCalcParser/main (into-array String ["src/antlr.txt"]))
+(load-file "src/grep.clj")
+(grep #({1}) "src/antlr.txt")
+(grep 1 "src/antlr.txt")
+(grep "1" "src/antlr.txt")
+(grep "3" "src/antlr.txt")
+(use 'matchure)
+(if-match [nil nil] true)
+(if-match [#"hello" "hello world"] true) ;=> true
+(if-match [java.lang.String "foo"] true) ;=> true
+(if-match [[[?a] ?b & ?rest] [[1] 2 3 4]] (list a b rest)) ;=> (1 2 (3 4))
+(if-match [(odd? ?) 1] true)
+(if-match [(odd? ?) 2] true)
+(when-match [[?fst & ?rst] (list 1 2)])
+  (prn "asdf")
+  (prn "ghjkl"))
+(when-match [[?fst & ?rst] (list 1 2)]
+  (prn "asdf")
+  (prn "ghjkl"))
+(cond-match "hello, world"
+  #"foo" "matches foo"
+  #"hello" "matches hello"
+  ? "doesn't match either") ;=> "matches hello"
+(doseq [n (range 1 101)]
+  (println
+    (match [(mod n 3) (mod n 5)]
+      [0 0] "FizzBuzz"
+      [0 _] "Fizz"
+      [_ 0] "Buzz"
+      :else n)))
+(use '[clojure.core.match :only (match)])
+(doseq [n (range 1 101)]
+  (println
+    (match [(mod n 3) (mod n 5)]
+      [0 0] "FizzBuzz"
+      [0 _] "Fizz"
+      [_ 0] "Buzz"
+      :else n)))
+(load-file "src/protobuffer.clj")
+(load-file "src/clucy.clj")
+(clucy/search index "scientist" 3)
+(clucy/search index "scientist" 0)
+(clucy/search index "scientist" 1)
+(clucy/search index "scientist" 2)
+(disk-index "tmp")
+(clucy/disk-index "tmp")
+(clucy/search index "name:bob" 10)
+(clucy/search index "name:bob AND job:Build" 10)
+(clucy/search index "name:bob AND job:Builder" 10)
+(load-file "src/solr.clj")
+(with-connection (connect "http://127.0.0.1:8983/solr")
+(search "test"))
+(with-connection (connect "http://127.0.0.1:8983/solr")
+(search "test" {}))
+(use 'clojure-solr)
+(with-connection (connect "http://127.0.0.1:8983/solr")
+(search "test" {}))
+(use '(incanter core charts pdf))
+(save-pdf (function-plot sin -4 4) "./pdf-chart.pdf")
+(load-file "src/pdf.clj")
+(load-file "src/incanter_pdf.clj")
+(load-file "src/pdf.clj")

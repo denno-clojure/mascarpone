@@ -1,0 +1,1 @@
+(SimpleCalcParser/main (into-array String ["src/antlr.txt"]))

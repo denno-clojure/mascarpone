@@ -3,6 +3,15 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :plugins [
+  [lein-antlr "0.2.0"]
+  [lein-protobuf "0.3.1"]
+  ]
+  ; just for antlr
+  :antlr-src-dir "antlr"
+  :antlr-dest-dir "gen-src"
+  :java-source-paths ["src/java" "gen-src"]
+
   :dependencies [
     ; clojure
     [org.clojure/clojure "1.5.0-alpha5"]
@@ -104,5 +113,31 @@
 
     ; timers
     [factual/timely "0.0.3"]
-    
+
+    ; at at
+    [overtone/at-at "1.1.1"]
+
+    ; latest antlr-complete, to test the generate parser from antlr plugin
+    [org.antlr/antlr4 "4.0"] 
+
+    ; files
+    [clj-glob "1.0.0"]
+
+    ; match and matchure
+    [matchure "0.10.1"]
+    [org.clojure/core.match "0.2.0-alpha11"]
+
+    ; google protobuffer
+    [org.flatland/protobuf "0.7.2"]
+
+    ; lucene
+    [clucy "0.3.0"]
+
+    ; solr remote integration
+    [org.clojars.mattdeboard/clojure-solr "0.4.0"]
+
+    ; pdf magic
+    [com.lowagie/itext "4.2.0"] ; use a more recent itext library
+    [clj-pdf "1.0.5-SNAPSHOT" :exclusions [itext-min "0.2"]] 
+
   ])
