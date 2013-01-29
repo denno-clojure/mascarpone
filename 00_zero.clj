@@ -85,3 +85,9 @@
 
  ; dotimes
  (dotimes [i 10] (println (str "hello" i)))
+
+ ; refs
+ (def r1 (ref 0))
+ (dosync (alter r1 inc))
+ (dosync (ref-set r1 3))
+ (println @r1)

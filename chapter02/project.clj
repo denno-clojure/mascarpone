@@ -138,6 +138,15 @@
 
     ; pdf magic
     [com.lowagie/itext "4.2.0"] ; use a more recent itext library
-    [clj-pdf "1.0.5-SNAPSHOT" :exclusions [itext-min "0.2"]] 
+    [clj-pdf "1.0.5-SNAPSHOT" :exclusions [[itext-min]]]
+
+    ; event processing
+    [clj-esper "1.0.1"]
+
+    ; ldap
+    [org.clojars.pntblnk/clj-ldap "0.0.7"]
+
+    ; parser
+    [net.cgrand/parsley "0.9.1"]
 
   ])

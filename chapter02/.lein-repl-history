@@ -162,3 +162,241 @@ un
 (load-file "src/pdf.clj")
 (load-file "src/incanter_pdf.clj")
 (load-file "src/pdf.clj")
+(defevent TestEvent [a :int b :string])
+(use 'clj-esper.core)
+(defevent TestEvent [a :int b :string])
+(def output-events (atom []))
+(defn- handler
+  [atom]
+  (fn [x]
+    (swap! atom conj x)))
+(def statement "SELECT a, b FROM TestEvent")
+(with-esper service {:events #{TestEvent}
+                   :uri "/something"}
+      (attach-statement statement (handler output-events))
+      (trigger-event (new-event TestEvent :a 1 :b "Hello"))
+)
+(use 'clj-esper.core)
+(defevent TestEvent [a :int b :string])
+(def output-events (atom []))
+(defn- handler
+  [atom]
+  (fn [x]
+    (swap! atom conj x)))
+(def statement "SELECT a, b FROM TestEvent")
+(with-esper service {:events #{TestEvent}
+                   :uri "/something"}
+      (attach-statement statement (handler output-events))
+      (trigger-event (new-event TestEvent :a 1 :b "Hello"))
+)
+(trigger-event (new-event TestEvent :a 1 :b "Hello")
+)
+(load-file "src/esper.clj")
+(with-esper service {:events #{TestEvent} :uri "/something"}
+      ;(attach-statement statement (handler output-events))
+      (attach-statement select-test handler)
+      (trigger-event (new-event TestEvent :a 1 :b "Hello")))
+(load-file "src/esper.clj")
+(trigger-event (new-event FooEvent :foo "Hello, World!"))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}}
+ ; (attach-statement select-test handler)
+ (trigger-event (new-event FooEvent :foo "Hello, World!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}}
+ ; (attach-statement select-test handler)
+ (trigger-event (new-event FooEvent :foo "Hello2, World!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}}
+ (attach-statement select-test handler)
+ (trigger-event (new-event FooEvent :foo "Hello, World!"))
+ (trigger-event (new-event FooEvent :foo "Hello2, World!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (attach-statement select-test handler))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (trigger-event (new-event FooEvent :foo "Hello, World!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (trigger-event (new-event FooEvent :foo "Hello, World3!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (trigger-event (new-event FooEvent :foo "Hello, World1!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (trigger-event (new-event FooEvent :foo "Hello, World2!")))
+(load-file "src/esper.clj")
+(with-esper service (trigger-event (new-event FooEvent :foo "Hello, World2!")))
+(with-esper service {:uri "/some-uri"} (trigger-event (new-event FooEvent :foo "Hello, World2!")))
+(send-event *service* (stringify-keys (new-event FooEvent :foo "Hello, World2!")) "hello")
+*service*
+clj-esper.core/*service*
+(with-esper service {:uri "/uri"} (trigger-event (new-event FooEvent :foo "Hello, World2!")))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}} (trigger-event (new-event FooEvent :foo "Hello, World2!"))) 
+(def r1 (ref 0))
+(dosync (alter r1 inc))
+(dosync (set-ref r1 2))
+(dosync (setref r1 2))
+(dosync (ref-set r1 2))
+(dosync (ref-set r1 3))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}}
+ (dosync (ref-set s service))
+ (attach-statement select-test handler)
+ (trigger-event (new-event FooEvent :foo "Hello, World!")))
+(def s (ref 0))
+(with-esper service {:uri "/some-uri" :events #{FooEvent}}
+ (dosync (ref-set s service))
+ (attach-statement select-test handler)
+ (trigger-event (new-event FooEvent :foo "Hello, World!")))
+s
+(meta (new-event FooEvent :foo "Hello, World!"))
+(:use [clojure.walk :only (stringify-keys)])
+(use '[clojure.walk :only (stringify-keys)])
+(send-event s (stringify-keys (new-event FooEvent :foo "Hello, World!")) "FooEvent")
+(send-event @s (stringify-keys (new-event FooEvent :foo "Hello, World!")) "FooEvent")
+(load-file "src/esper.clj")
+(call-event evt-1)
+(load-file "src/esper.clj")
+(call-event evt-1)
+c
+(require '[clj-ldap.client :as ldap])
+(def ldap-server (ldap/connect {:host "localhost"}))
+(def ldap-server (ldap/connect {:host "localhost" :port 10389}))
+(def ldap-server (ldap/connect {:host "0.0.0.0" :port 10389}))
+(def ldap-server (ldap/connect {:host "0.0.0.0:10389"}))
+(ldap/get ldap-server "cn=dude,ou=people,dc=example,dc=com")
+(ldap/get ldap-server "ou=people,dc=example,dc=com")
+(ldap/add conn "cn=dude,ou=people,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/add ldap-server "cn=dude,ou=people,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/get ldap-server "dc=config")
+(ldap/get ldap-server "ou=config")
+(ldap/get ldap-server "ou=users,dc=example,dc=com")
+(ldap/add ldap-server "dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/add ldap-server "ou=people,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/add ldap-server "cn=dude,ou=people,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/add ldap-server "dc=example,dc=com"
+               {:objectClass #{"top"}
+                :cn "dude"
+                :sn "a"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]})
+(ldap/add ldap-server "dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2")
+(ldap/add ldap-server "dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+dc=example,dc=com
+(ldap/add ldap-server "dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :dc "dude"
+                :sn "dude2"})
+(ldap/add ldap-server "dc=dude,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+(ldap/add ldap-server "ou=person,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+(ldap/get ldap-server "cn=dude,ou=people,dc=example,dc=com")
+(ldap/get ldap-server "cn=dude,dc=example,dc=com")
+(ldap/get ldap-server "cn=dude,ou=people,dc=example,dc=com")
+(ldap/add ldap-server "cn=dude,ou=person,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+(ldap/add ldap-server "cn=dude,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+(ldap/add ldap-server "cn=dude2,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "dude"
+                :sn "dude2"})
+(ldap/add ldap-server "cn=nico,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "nico"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]
+                :sn "dude2"})
+(ldap/get ldap-server "cn=nico")
+(ldap/get ldap-server "cn=nico,dc=example,dc=com")
+(ldap/modify conn "cn=nico,dc=example,dc=com"
+              {:add {:telephoneNumber "232546265"}})
+(ldap/modify ldap-server "cn=nico,dc=example,dc=com"
+              {:add {:telephoneNumber "232546265"}})
+(load-file "src/ldap.clj")
+(ldap/add ldap-server "cn=nico,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "nico"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]
+                :sn "dude2"})
+(ldap/get ldap-server "cn=nico,dc=example,dc=com")
+(ldap/modify ldap-server "cn=nico,dc=example,dc=com"
+              {:add {:telephoneNumber "232546265"}})
+(ldap/modify ldap-server "cn=nico,dc=example,dc=com"
+              {:delete {:telephoneNumber :all}})
+(ldap/delete ldap-server "cn=nico,dc=example,dc=com")
+(ldap/add ldap-server "cn=nico,dc=example,dc=com"
+               {:objectClass #{"top" "person"}
+                :cn "nico"
+                :description "His dudeness"
+                :telephoneNumber ["1919191910" "4323324566"]
+                :sn "dude2"})
+(require '[clojure.core.reducers :as r])
+r
+r/fiter
+r/filter
+(reduce + (r/filter even? (r/map inc [1 1 1 2])))
+(def red (comp (r/filter even?) (r/map inc))) 
+red
+(red [1 1 1 2])
+(eval (red [1 1 1 2]))
+(apply str (red [1 1 1 2]))
+(reduce + (red [1 1 1 2]))
+comp
+(doc comp)
+(r/map inc [1 1 1 2])
+(def red (comp (r/filter even?) (r/map inc))) 
+red
+(reduce + (red [1 1 1 2]))
+(load-file "src/parsley_1.clj")
+(p "(xxx)")
+(pprint (p "(xxx)"))
+(-> p p/incremental-buffer (p/edit 0 0 "(") (p/edit 1 0 "(x)") p/parse-tree pprint)
+(let [line (apply str "\n" (repeat 10 "((x))"))
+         input (str "(" (apply str (repeat 1000 line)) ")")
+         buf (p/incremental-buffer p)
+         buf (p/edit buf 0 0 input)]
+     (time (p/parse-tree buf))
+     (time (p/parse-tree (-> buf (p/edit 2 0 "(") (p/edit 51002 0 ")"))))
+     nil)
+(load-file "src/parsley_2.clj")
+(def p (p/parser :expr #{"nico" [:expr*]}))
+(def p (p/parser :expr #{"x" ["(" :expr* ")"]}))
+p
+(def n (p/parser :expr #{"nico" [:expr* " "]}))
+(def n (p/parser :expr #{"nico" [" " :expr* " "]}))
+(def n (p/parser :expr #{"nico" [" " :expr*]}))
+(require '[net.cgrand.parsley :as p])
+(def p (p/parser :expr #{"nico" ["(" :expr* ")"]}))
+(p/parser "nico")
+(p "nico")
