@@ -1,0 +1,4 @@
+["insert","accounts",{"owner":"Eve","credits":100,"id":1}]
+["insert","accounts",[{"owner":"Bob","credits":150,"id":2},{"owner":"Dan","credits":50,"id":3},{"owner":"Amy","credits":1000,"id":4,"vip":true}]]
+["delete","accounts",{"where":["=","id",3]}]
+["update","accounts",{"credits":55},{"where":["=","owner","Bob"]}]
