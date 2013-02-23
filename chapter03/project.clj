@@ -24,4 +24,9 @@
     [com.novemberain/langohr "1.0.0-beta11"]
     [cupboard "1.0beta1"]
     [fleetdb-client "0.2.2"]
+
+    ; SQL
+    [com.h2database/h2 "1.3.154"]
+    [hellonico/lobos "1.0.0-beta1"]
+    [korma "0.3.0-beta7" :exclusions [org.clojure/clojure]]
   ])
