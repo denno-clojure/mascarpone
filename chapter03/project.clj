@@ -39,4 +39,5 @@
     [factql "1.0.3"]
     [hellonico/zenclient "1.2"]
     [clj-mixpanel "0.0.1-SNAPSHOT"]
+    [clj-todoist "1.0.0"]
   ])
