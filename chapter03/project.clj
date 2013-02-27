@@ -29,4 +29,14 @@
     [com.h2database/h2 "1.3.154"]
     [hellonico/lobos "1.0.0-beta1"]
     [korma "0.3.0-beta7" :exclusions [org.clojure/clojure]]
+
+    ; liquidbase
+    [clj-dbcp      "0.8.0"]  ; to create connection-pooling DataSource
+    [clj-liquibase "0.4.0"]  ; for this library
+    [oss-jdbc      "0.8.0"]  ; for Open Source JDBC drivers
+
+    ; Remote Libs
+    [factql "1.0.3"]
+    [hellonico/zenclient "1.2"]
+    [clj-mixpanel "0.0.1-SNAPSHOT"]
   ])
