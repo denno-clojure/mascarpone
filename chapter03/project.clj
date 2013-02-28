@@ -45,4 +45,5 @@
     ; testing
     ; [midje "1.4.0"]
     [clj-webdriver "0.6.0-beta2"]
+    [criterium "0.3.1"]
   ])
