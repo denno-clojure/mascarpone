@@ -1,6 +1,5 @@
-(ns examples.cupboard.simple
-  (:require [cupboard.core :as cb])
-  (:use [cupboard.utils]))
+(require '[cupboard.core :as cb])
+(use '[cupboard.utils])
 
 (cb/open-cupboard! "/tmp/books")
 

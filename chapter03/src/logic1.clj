@@ -1,6 +1,6 @@
 ; https://github.com/clojure/core.logic/wiki/Examples
 
-(ns classic-ai-example
+(ns logic1
    (:refer-clojure :exclude [==])
    (:use clojure.core.logic))
 

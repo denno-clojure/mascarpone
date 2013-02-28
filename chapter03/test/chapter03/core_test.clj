@@ -1,6 +1,5 @@
 (ns chapter03.core-test
-  (:use clojure.test
-        chapter03.core))
+  (:use clojure.test))
 
 (deftest a-test
   (testing "FIXME, I fail."
