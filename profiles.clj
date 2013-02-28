@@ -3,6 +3,7 @@
                   [lein-webrepl "0.1.0-SNAPSHOT"]
                   [lein-midje "2.0.4"]
                   [lein-scalac "0.1.0"]
+                  [lein-cucumber "1.0.2"]
                   [lein-pprint "1.1.1"]]}}
                  
 ;:profiles {:dev {:dependencies [
