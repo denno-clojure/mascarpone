@@ -46,4 +46,12 @@
     ; [midje "1.4.0"]
     [clj-webdriver "0.6.0-beta2"]
     [criterium "0.3.1"]
+    [speclj "2.5.0"]
+
+    ; Ring testing
+    [com.gfredericks/vcr-clj "0.2.2"]
+    [ring/ring-jetty-adapter "1.1.2"] ; for testing above
+    [kerodon "0.0.7"]
+      [net.cgrand/moustache "1.2.0-alpha1"] ; to help the above
+      [hiccup "1.0.2"]
   ])
