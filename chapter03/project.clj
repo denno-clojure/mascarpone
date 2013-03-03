@@ -2,11 +2,16 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :cucumber-feature-paths ["test/features/"]
+
+  :profiles {:dev {:dependencies [
+    [midje "1.5-RC1"]
+  ]}}
+
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
   	; [org.clojure/clojure "1.4.0"]
-    [org.clojure/clojure "1.5.0-alpha3"]
+    [org.clojure/clojure "1.5.0-beta1"]
 
   	; fractals
   	[net.mikera/clisk "0.7.0"]
