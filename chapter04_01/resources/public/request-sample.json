@@ -1,0 +1,28 @@
+{
+  :body               #<Input org.mortbay.jetty.HttpParser$Input@3e1d25>
+  :character-encoding nil, 
+  :content-length     nil, 
+  :content-type       nil, 
+  :cookies            {}, 
+  :form-params        {},
+  :params             {"word" "bar"}, 
+  :query-params       {"word" "bar"},
+  :query-string       "word=bar",
+  :remote-addr        0:0:0:0:0:0:0:1,
+  :request-method     :get,
+  :route-params       {},
+  :scheme             :http,
+  :server-name        "localhost", 
+  :uri                "/foo", 
+  :server-port        8080, 
+  :headers {
+    accept          text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, 
+    accept-charset  ISO-8859-1,utf-8;q=0.7,*;q=0.7, 
+    accept-encoding gzip,deflate, 
+    accept-language en-us,en;q=0.5, 
+    connection      keep-alive, 
+    host            localhost:8080
+    keep-alive      300, 
+    user-agent      Mozilla/5.0 ...,
+  }, 
+}

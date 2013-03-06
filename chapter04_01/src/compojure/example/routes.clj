@@ -8,6 +8,7 @@
 
 (defroutes main-routes
   (GET "/" [] (index-page))
+  (GET "/user/:id" [id] (str "<h1>Hello user " id "</h1>"))
   (route/resources "/")
   (route/not-found "Page not found"))
 
