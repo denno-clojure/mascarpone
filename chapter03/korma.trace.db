@@ -1,0 +1,15 @@
+02-23 09:55:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "users" already exists; SQL statement:
+CREATE TABLE "users" ("first" VARCHAR(100), "last" VARCHAR(100)) [42101-154]
+02-23 09:55:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "users" already exists; SQL statement:
+CREATE TABLE "users" ("first" VARCHAR(100), "last" VARCHAR(100)) [42101-154]
+02-23 09:57:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "users" already exists; SQL statement:
+CREATE TABLE "users" ("first" VARCHAR(100), "last" VARCHAR(100)) [42101-154]
+02-23 10:10:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "users" already exists; SQL statement:
+CREATE TABLE "users" ("first" VARCHAR(100), "last" VARCHAR(100)) [42101-154]
+02-23 11:25:34 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLException: Table "users" already exists; SQL statement:
+CREATE TABLE "users" ("id" INTEGER AUTO_INCREMENT, "first" VARCHAR(100), "last" VARCHAR(100), CONSTRAINT "users_primary_key_id" PRIMARY KEY ("id")) [42101-154]
