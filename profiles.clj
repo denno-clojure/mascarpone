@@ -6,6 +6,7 @@
                   [lein-midje "3.0-RC1"]
                   ;[lein-light "0.0.4"]
                   [lein-exec "0.3.0"]
+                  [lein-immutant "0.17.1"]
                   ;[lein-scalac "0.1.0"]
                   ;[perforate "0.3.0"]
                   ;[lein-cucumber "1.0.2"]
