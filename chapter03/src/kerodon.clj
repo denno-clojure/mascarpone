@@ -8,6 +8,8 @@
             [ring.middleware.session :as session]
             [hiccup.core :as hiccup]))
 
+; define the app
+
 (def app
   (params/wrap-params
    (session/wrap-session
@@ -33,6 +35,7 @@
                 (assoc (response/redirect "/") :session {:user "someone"})
                 (response/response "Bad login")))}))))
 
+; write the tests.
 (deftest user-can-login-and-see-name
   (-> (session app)
       (visit "/")

@@ -59,4 +59,5 @@
     [kerodon "0.0.7"]
       [net.cgrand/moustache "1.2.0-alpha1"] ; to help the above
       [hiccup "1.0.2"]
+    [ring-mock "0.1.3"]
   ])
