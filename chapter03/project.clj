@@ -60,4 +60,7 @@
       [net.cgrand/moustache "1.2.0-alpha1"] ; to help the above
       [hiccup "1.0.2"]
     [ring-mock "0.1.3"]
+
+    ; validation 
+    [bouncer "0.2.3-beta1"]
   ])
