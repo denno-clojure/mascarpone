@@ -23,7 +23,7 @@
 
 ; send a direct message
 (def producer (.createProducerTemplate camel-context))
-(.sendBody producer "file://in" "hello")
+(.sendBody producer "file://in-mq" "hello")
 
 ; once finished
 ; (.stop camel-context)
