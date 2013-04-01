@@ -5,7 +5,10 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
   	[org.clojure/clojure "1.5.1"]
-  	
+
   	[clamq/clamq-jms "0.4"]
   	[clamq/clamq-activemq "0.4"]
+
+	[clj-camel "1.0.1"]
+	[org.slf4j/slf4j-simple "1.7.5"]
   ])
