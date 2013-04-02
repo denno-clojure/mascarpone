@@ -19,4 +19,7 @@
 
   [hellonico/labs.redis "0.1.1"]
   [com.taoensso/carmine "1.6.0"]
+
+  [hellonico/avout "0.5.4"]
+
   ])
