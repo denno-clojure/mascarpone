@@ -16,4 +16,7 @@
   ; [com.novemberain/quartz-mongodb "1.1.0"]
 
   [cronj "0.6.1"]
+
+  [hellonico/labs.redis "0.1.1"]
+  [com.taoensso/carmine "1.6.0"]
   ])
