@@ -22,4 +22,6 @@
 
   [hellonico/avout "0.5.4"]
 
+  [clojurewerkz/spyglass "1.1.0-beta3"]
+
   ])
