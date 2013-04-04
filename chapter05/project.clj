@@ -3,6 +3,7 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
   :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :resource-paths ["resources/jfxrt.jar"]
   :dependencies [
   [org.clojure/clojure "1.5.1"]
 
@@ -23,5 +24,7 @@
   [hellonico/avout "0.5.4"]
 
   [clojurewerkz/spyglass "1.1.0-beta3"]
+
+  [cljain "0.4.0"]
 
   ])
