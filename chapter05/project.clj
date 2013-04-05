@@ -27,4 +27,6 @@
 
   [cljain "0.4.0"]
 
+  [org.clojars.paul/clj-hector "0.2.8"]
+
   ])
