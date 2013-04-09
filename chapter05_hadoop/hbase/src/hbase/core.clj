@@ -6,42 +6,34 @@
 
 (def test-tbl-name "test-users")
 
-; (hb/with-table [users (hb/table test-tbl-name)]
-; (hb/put users "row" :value [:test-cf-name1 :testqual :testval]))
+(defn keywordize 
+  [x] 
+  (keyword (Bytes/toString x)))
 
-; (hb/put users "testrow" :values [:test-cf-name1 [:test1qual1 "testval1"
-;                                                   :test1qual2 "testval2"]
-;                                   :test-cf-name2 [:test2qual1 "testval3"
-;                                                   :test2qual2 "testval4"]]))
-
-(defn keywordize [x] (keyword (Bytes/toString x)))
-
-(defn test-vector
+(defn vectorize
   [result]
   (hb/as-vector result :map-family keywordize :map-qualifier keywordize :map-timestamp (fn [x] nil) :map-value keywordize))
 
-  (hb/with-table [users (hb/table test-tbl-name)]
-     (hb/put users "testrow" :value [:test-cf-name "test" "test"])
+; simple insert, one value
+(hb/with-table [users (hb/table test-tbl-name)]
+ (hb/put users "testrow" :value [:test-cf-name "test" "test"])
+ (vectorize (hb/get users "testrow" :columns [:test-cf-name])))
 
-     (test-vector (hb/get users "testrow" :columns [:test-cf-name])))
-     ; (hb/delete users "testrow" :columns [:account [:c1 :c2]])
-     ; (hb/get users "testrow" :columns [:account [:c1 :c2]]))
-  
-; (remove-tbl)
+; simple insert, multiple values
+(hb/with-table [users (hb/table test-tbl-name)]
+ (hb/put users "testrow1" :values [:test-cf-name [:test "test" :test2 "test2" :test3 "test3"]])
+ (vectorize (hb/get users "testrow1" :columns [:test-cf-name])))
 
+; simple delete
+(hb/with-table [users (hb/table test-tbl-name)]
+ (hb/delete users "testrow" :columns [:test-cf-name [:test :test2]]))
+; nil
 
-  ; (hb/with-table [users (hb/table "test-users")]
-  ;        (hb/put users "testrow" :values [:account [:c1 "test" :c2 "test2"]]))
-  ; ; nil
+(hb/with-table [users (hb/table test-tbl-name)]
+ (vectorize (hb/get users "testrow" :columns [:test-cf-name [:test :test2]])))
+; []
 
-  ; (hb/with-table [users (hb/table "test-users")]
-  ;        (hb/get users "testrow" :columns [:account [:c1 :c2]]))
-  ; ; #<Result keyvalues={testrow/account:c1/1265871284243/Put/vlen=4, testrow/account:c2/1265871284243/Put/vlen=5}>
-
-  ; (hb/with-table [users (hb/table "test-users")]
-  ;        (hb/delete users "testrow" :columns [:account [:c1 :c2]]))
-  ; ; nil
-
-  ; (hb/with-table [users (hb/table "test-users")]
-  ;        (hb/get users "testrow" :columns [:account [:c1 :c2]]))
-  ; ; #<Result keyvalues=NONE>
+(hb/with-table [users (hb/table test-tbl-name)]
+    (hb/modify users 
+      (hb/put* "testrow" :value [:test-cf-name :test "updated"])))
+; [[:test-cf-name :test nil :updated]]
