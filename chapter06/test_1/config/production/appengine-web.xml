@@ -1,0 +1,17 @@
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+
+    <application>niclojure</application>
+    <version>1</version>
+
+    <public-root>/public</public-root>
+    <sessions-enabled>true</sessions-enabled>
+    <threadsafe>true</threadsafe>
+
+    <system-properties>
+        <property name="joodo.env" value="production"/>
+        <property name="joodo.core.namespace" value="test-1.core"/>
+        <property name="joodo.ignore.config" value="true"/>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    </system-properties>
+
+</appengine-web-app>
