@@ -1,1 +1,1 @@
-([:dependencies ([org.clojure/clojure "1.4.0"] [gaeshi/gaeshi "0.10.0"] [gaeshi/gaeshi-dev "0.10.0"] [speclj/speclj "2.2.0"])])
+([:dependencies ([ring-server "0.2.1"] [org.clojure/clojure "1.4.0"] [gaeshi/gaeshi "0.10.0"] [gaeshi/gaeshi-dev "0.10.0"] [speclj/speclj "2.2.0"])])

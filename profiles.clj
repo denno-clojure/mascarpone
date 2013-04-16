@@ -1,4 +1,5 @@
 {:user {:plugins [
+                  [lein-beanstalk "0.2.7"]
                   [gaeshi/lein-gaeshi "0.10.0"]
                   ;[lein-swank "1.4.0"]
                   ;[org.clojars.cvillecsteele/lein-git-version "1.0.0"]
