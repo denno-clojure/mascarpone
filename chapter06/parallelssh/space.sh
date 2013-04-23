@@ -1,0 +1,1 @@
+java -jar parallel-ssh-0.1.jar -u nicolas  --servers jp-1,jp-2,jp-3 "df -ah | grep sda1"
