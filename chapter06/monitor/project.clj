@@ -6,4 +6,5 @@
   :dependencies [
   [org.clojure/clojure "1.5.1"]
   [clj.monitor "1.0.0-beta"]
+  [control/control "0.4.1"]
   ])
