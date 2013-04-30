@@ -1,0 +1,9 @@
+{:memory-size 512
+         :cpu-count 1
+         :network [{:attachment-type :host-only
+                    :host-only-interface "vboxnet0"}
+                   {:attachment-type :nat}]
+         :storage [{:name "IDE Controller"
+                    :bus :ide
+                    :devices [nil nil {:device-type :dvd} nil]}]
+         :boot-mount-point ["IDE Controller" 0]}

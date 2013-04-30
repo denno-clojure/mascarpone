@@ -1,0 +1,71 @@
+2013-05-01 01:19:18,739 INFO [nREPL-worker-0] v.v.image About to execute job 
+{:image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-lubuntu-6/lubuntu.vdi",
+ :temp-dir
+ #<File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-lubuntu-6>,
+ :model-meta "/Users/niko/.vmfest/models/vmfest-lubuntu.meta",
+ :vbox
+ {:url "http://localhost:18083/", :username "test", :password "test"},
+ :model-name "lubuntu",
+ :image-name "lubuntu",
+ :gzipped? false,
+ :gzipped-image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-lubuntu-6/lubuntu.vdi",
+ :meta nil,
+ :model-file "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi",
+ :image-file-name "lubuntu.vdi",
+ :model-path "/Users/niko/.vmfest/models",
+ :meta-url "../vmfest/resources/lubuntu.meta",
+ :image-url "../vmfest/resources/lubuntu.vdi"}
+
+2013-05-01 01:19:18,739 ERROR [nREPL-worker-0] v.v.image The model /Users/niko/.vmfest/models/vmfest-lubuntu.vdi already exists. Manually specifiy another file name with :model-name
+2013-05-01 01:20:12,381 INFO [nREPL-worker-1] v.v.image About to execute job 
+{:image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico/lubuntu.vdi",
+ :temp-dir
+ #<File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico>,
+ :model-meta "/Users/niko/.vmfest/models/vmfest-nico.meta",
+ :vbox
+ {:url "http://localhost:18083/", :username "test", :password "test"},
+ :model-name "nico",
+ :image-name "lubuntu",
+ :gzipped? false,
+ :gzipped-image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico/lubuntu.vdi",
+ :meta nil,
+ :model-file "/Users/niko/.vmfest/models/vmfest-nico.vdi",
+ :image-file-name "lubuntu.vdi",
+ :model-path "/Users/niko/.vmfest/models",
+ :meta-url "../vmfest/resources/lubuntu.meta",
+ :image-url "../vmfest/resources/lubuntu.vdi"}
+
+2013-05-01 01:20:12,383 INFO [nREPL-worker-1] v.v.image nico:Downloading ../vmfest/resources/lubuntu.vdi into /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico/lubuntu.vdi
+2013-05-01 01:20:20,501 INFO [nREPL-worker-1] v.v.image nico:File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico/lubuntu.vdi is already uncompressed
+2013-05-01 01:20:20,501 INFO [nREPL-worker-1] v.v.image nico:Loading metadata from ../vmfest/resources/lubuntu.meta
+2013-05-01 01:20:20,504 INFO [nREPL-worker-1] v.v.image nico:Registering image /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-nico/lubuntu.vdi as /Users/niko/.vmfest/models/vmfest-nico.vdi in vmfest.virtualbox.model.Server@49718d22
+2013-05-01 01:20:45,515 INFO [nREPL-worker-1] v.v.image nico:Creating meta file /Users/niko/.vmfest/models/vmfest-nico.meta with {:nico {:uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 01:22:19,683 INFO [nREPL-worker-2] v.v.image About to execute job 
+{:image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi",
+ :temp-dir
+ #<File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial>,
+ :model-meta "/Users/niko/.vmfest/models/vmfest-tutorial.meta",
+ :vbox
+ {:url "http://localhost:18083/", :username "test", :password "test"},
+ :model-name "tutorial",
+ :image-name "lubuntu",
+ :gzipped? false,
+ :gzipped-image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi",
+ :meta nil,
+ :model-file "/Users/niko/.vmfest/models/vmfest-tutorial.vdi",
+ :image-file-name "lubuntu.vdi",
+ :model-path "/Users/niko/.vmfest/models",
+ :meta-url "../vmfest/resources/lubuntu.meta",
+ :image-url "../vmfest/resources/lubuntu.vdi"}
+
+2013-05-01 01:22:19,684 INFO [nREPL-worker-2] v.v.image tutorial:Downloading ../vmfest/resources/lubuntu.vdi into /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi
+2013-05-01 01:22:28,029 INFO [nREPL-worker-2] v.v.image tutorial:File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi is already uncompressed
+2013-05-01 01:22:28,029 INFO [nREPL-worker-2] v.v.image tutorial:Loading metadata from ../vmfest/resources/lubuntu.meta
+2013-05-01 01:22:28,052 INFO [nREPL-worker-2] v.v.image tutorial:Registering image /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi as /Users/niko/.vmfest/models/vmfest-tutorial.vdi in vmfest.virtualbox.model.Server@49718d22
+2013-05-01 01:23:12,575 INFO [nREPL-worker-2] v.v.image tutorial:Creating meta file /Users/niko/.vmfest/models/vmfest-tutorial.meta with {:tutorial {:uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}

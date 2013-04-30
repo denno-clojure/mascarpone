@@ -1,0 +1,51 @@
+(require 'pallet.core 'pallet.compute 'pallet.configure)
+(load-file "src/palletquickstart/groups/tutorial.clj")
+(models)
+(load-file "src/palletquickstart/groups/tutorial.clj")
+(pprint (images vmfest))
+(use '[pallet.compute :only [images]])
+(pprint (images vmfest))
+(images)
+(images "vmfest")
+(images :vmfest)
+(ns tutorial)
+vmfest
+(images vmfest)
+(use '[pallet.compute :only [images]])
+(pprint (images vmfest))
+(images vmfest)
+(use '[pallet.core :only [group-spec]])
+(def debian-group 
+    (group-spec "debian-vms" 
+         :node-spec {:image {:image {:os-family :debian}}}))
+(pallet.core/converge debian-group)
+(def debian-group 
+    (group-spec "debian-vms" 
+         :node-spec {:image {:image {:os-family :lubuntu}}}))
+(pallet.core/converge debian-group)
+(def mygroup
+    (group-spec "mygroup" 
+         :node-spec {:image {:image {:os-family :debian :os-64-bit? true }}}))
+(require 'pallet.core 'pallet.compute 'pallet.configure)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec (pallet.core/node-spec :image {:os-family :debian}))
+  :compute (pallet.configure/compute-service :vmfest))
+(images vmfest)
+(def mygroup
+    (group-spec "mygroup" 
+         :node-spec {:image {:image {:image-id "lubuntu"}}}))
+(pallet.core/converge
+mygroup
+   :compute (pallet.configure/compute-service :vmfest)
+)
+(def mygroup
+    (group-spec "mygroup" 
+         :node-spec {:image {:image-id "lubuntu"}}))
+(pallet.core/converge mygroup :compute (pallet.configure/compute-service :vmfest))
+(use clojure.core.pprint)
+(use 'clojure.core.pprint)
+(use 'clojure.pprint)
+(pprint (images vmfest))
+mygroup

@@ -1,0 +1,52 @@
+2013-05-01 01:16:55,461 DEBUG [nREPL-worker-1] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 01:16:56,231 WARN [nREPL-worker-1] p.c.implementation pallet.compute.vmfest provider failed to load:org.virtualbox_4_2.IVirtualBox
+2013-05-01 01:16:56,236 DEBUG [nREPL-worker-1] p.c.jclouds Found jclouds sshj driver
+2013-05-01 01:16:56,237 DEBUG [nREPL-worker-1] p.c.jclouds extensions (:slf4j :sshj)
+2013-05-01 01:18:24,905 DEBUG [nREPL-worker-0] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 01:18:25,604 WARN [nREPL-worker-0] p.c.implementation pallet.compute.vmfest provider failed to load:org.virtualbox_4_2.IVirtualBox
+2013-05-01 01:18:25,607 DEBUG [nREPL-worker-0] p.c.jclouds Found jclouds sshj driver
+2013-05-01 01:18:25,609 DEBUG [nREPL-worker-0] p.c.jclouds extensions (:slf4j :sshj)
+2013-05-01 01:19:14,993 DEBUG [nREPL-worker-0] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 01:19:18,185 DEBUG [nREPL-worker-0] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:19:18,188 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images (:lubuntu)
+2013-05-01 01:19:18,654 INFO [nREPL-worker-0] p.c.vmfest No :default-bridged-interface defined. Will chose from these options:en1:Wi-Fi (AirPort)
+2013-05-01 01:19:18,655 DEBUG [nREPL-worker-0] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:19:18,655 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images:(:lubuntu)
+2013-05-01 01:19:18,655 DEBUG [nREPL-worker-0] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:19:18,661 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:19:18,661 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:19:18,662 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:19:18,662 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:19:18,664 DEBUG [nREPL-worker-0] p.c.vmfest installing image to /Users/niko/.vmfest/models with options null
+2013-05-01 01:20:03,755 DEBUG [nREPL-worker-1] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:20:03,757 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images (:lubuntu)
+2013-05-01 01:20:03,820 INFO [nREPL-worker-1] p.c.vmfest No :default-bridged-interface defined. Will chose from these options:en1:Wi-Fi (AirPort)
+2013-05-01 01:20:03,821 DEBUG [nREPL-worker-1] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:20:03,821 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images:(:lubuntu)
+2013-05-01 01:20:03,822 DEBUG [nREPL-worker-1] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:20:03,822 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:20:03,822 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:20:03,822 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:20:03,822 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:20:12,300 DEBUG [nREPL-worker-1] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:20:12,301 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images (:lubuntu)
+2013-05-01 01:20:12,352 INFO [nREPL-worker-1] p.c.vmfest No :default-bridged-interface defined. Will chose from these options:en1:Wi-Fi (AirPort)
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images:(:lubuntu)
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:20:12,353 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:20:12,355 DEBUG [nREPL-worker-1] p.c.vmfest installing image to /Users/niko/.vmfest/models with options {:model-name "nico"}
+2013-05-01 01:22:19,602 DEBUG [nREPL-worker-2] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:22:19,604 DEBUG [nREPL-worker-2] p.c.vmfest Loaded images (:nico :lubuntu)
+2013-05-01 01:22:19,653 INFO [nREPL-worker-2] p.c.vmfest No :default-bridged-interface defined. Will chose from these options:en1:Wi-Fi (AirPort)
+2013-05-01 01:22:19,653 DEBUG [nREPL-worker-2] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:22:19,653 DEBUG [nREPL-worker-2] p.c.vmfest Loaded images:(:lubuntu :nico)
+2013-05-01 01:22:19,653 DEBUG [nREPL-worker-2] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:22:19,653 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:22:19,654 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:22:19,654 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:22:19,654 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:22:19,656 DEBUG [nREPL-worker-2] p.c.vmfest installing image to /Users/niko/.vmfest/models with options {:model-name "tutorial"}
