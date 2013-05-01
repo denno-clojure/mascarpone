@@ -1,0 +1,9 @@
+pom.xml
+*jar
+/lib/
+/classes/
+.lein-deps-sum
+/data/*xcf
+/data/*jpg
+target
+.DS_store
