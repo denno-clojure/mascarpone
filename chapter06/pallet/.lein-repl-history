@@ -178,3 +178,318 @@ mynode
 (pallet.core/converge mygroup-up :compute vmfest)
 vmfest
 mynode
+(pprint (pallet.compute/images vmfest))
+(pallet.compute/nodes vmfest)
+(pallet.compute/shutdown vmfest node-spec)
+(pallet.compute/shutdown vmfest mynode) 
+(pallet.compute/shutdown vmfest mynode nil) 
+(pallet.compute/shutdown vmfest mynode) 
+(pallet.compute/nodes vmfest)
+(pallet.compute/reboot (pallet.compute/nodes vmfest))
+(pallet.compute/reboot vmfest (pallet.compute/nodes vmfest))
+(pallet.compute/reboot vmfest (frst (pallet.compute/nodes vmfest)))
+(pallet.compute/reboot vmfest (first (pallet.compute/nodes vmfest)))
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu  :image-id "tutorial"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(add-image vmfest "../vmfest/resources/lubuntu.vdi" :model-name "lun")
+(pprint (pallet.compute/images vmfest))
+(def mynode 
+(pallet.core/node-spec :image {:image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(pprint mygroup-up)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu  :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:image {:os-family :ubuntu}  :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:image {:os-family :ubuntu} :os-family :ubuntu :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:image {:os-family :ubuntu :os-version-matches "10.10"} :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu :os-version-matches "10.10" :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu :os-version "10.10" :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(load-file "src/vmfest/core.clj")
+(load-file "src/palletquickstart//core.clj")
+(load-file "src/palletquickstart/groups/core.clj")
+(load-file "src/palletquickstart/groups/tutorial.clj")
+(ns tutorial)
+(pprint (pallet.compute/images vmfest))
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu :image-id "tutorial"}))
+(pprint mynode)
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pprint mygroup-up)
+mynod
+mynode
+(require 'pallet.core 'pallet.compute 'pallet.configure)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :ubuntu :image-id "tutorial"}))
+(pprint mynode)
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pprint mygroup-up)
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:image-id :lubuntu}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {{:image {:os-family :debian      
+                                     :os-64-bit? true }} :image-id :tutorial}))
+(def mynode 
+(pallet.core/node-spec :image {:image {:os-family :debian      
+                                     :os-64-bit? true } :image-id :tutorial}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(load-file "src/palletquickstart/groups/tutorial.clj")
+(ns tutorial)
+(require 'pallet.core 'pallet.compute 'pallet.configure)
+(def mynode 
+(pallet.core/node-spec :image {:image {:os-family :debian      
+                                     :os-64-bit? true } :image-id :tutorial}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def debian-group 
+    (group-spec "debian-vms" 
+         :node-spec {:image {:image-id :lubuntu}}))
+(def debian-group 
+    (pallet.core/group-spec "debian-vms" 
+         :node-spec {:image {:image-id :lubuntu}}))
+(pallet.core/converge debian-group :compute vmfest)
+(def debian-group 
+    (pallet.core/group-spec "debian-vms" 
+         :node-spec {:image {:image {:os-family :debian      
+                                     :os-64-bit? true }
+                                     :image-id :lubuntu}}))
+(pallet.core/converge debian-group :compute vmfest)
+(def debian-group 
+    (pallet.core/group-spec "debian-vms" 
+         :node-spec {:image {:image {:os-family :debian      
+                                     :os-64-bit? true }
+                                     :image-id "lubuntu"}}))
+(pallet.core/converge debian-group :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :debian      
+                                     :os-64-bit? true :image-id :tutorial}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:os-family :debian :os-64-bit? true :image-id "tutorial"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(pprint (pallet.compute/images vmfest))
+(def mynode 
+(pallet.core/node-spec :image {:os-family :debian :os-64-bit? true :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(use 'vmfest.manager)
+(def my-server (server))
+(def my-server (server "http://localhost:18083"))
+ (models my-server)
+(load-models)
+(images vmfest)
+(pprint (pallet.compute/images vmfest))
+pallet.compute/images
+(doc pallet.compute/images)
+(find-doc pallet.compute/images)
+(doc map)
+(use 'clojure.repl)
+(doc map)
+(doc pallet.compute/images)
+(doc pallet.compute)
+(doc pallet.crate)
+ :packager :apt,
+:username "vmfest",
+:os-family :ubuntu,
+:os-version "12.04",
+:uuid "/Users/XXXXXX/.vmfest/models/vmfest-ubu.vdi",
+:os-64-bit false, 
+ :packager :apt,
+:username "vmfest",
+:os-family :ubuntu,
+:os-version "12.04",
+:uuid "/Users/XXXXXX/.vmfest/models/vmfest-ubu.vdi",
+:os-64-bit false, 
+(def mynode 
+(pallet.core/node-spec :image {:os-family :debian:os-64-bit? true :image-id "lun"}))
+(def mynode 
+(pallet.core/node-spec :image {:os-family :debian :os-64-bit? true :image-id "lun"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup2"  :count 1 :node-spec mynode))
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.core/converge mynode :compute vmfest)
+(pallet.core/converge mynode :compute vmfest)(def mygroup-down
+(def mygroup-down
+    (pallet.core/group-spec "mygroup" :count 0 :node-spec mynode))
+(pallet.core/converge mygroup-down :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup" :count 0))
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0))
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 1))
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 1 :node-spec mynode))
+mynode
+(pallet.core/converge (pallet.core/group-spec "mygroup3" :count 1 :node-spec mynode))
+(pprint (pallet.compute/images vmfest))
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup" :count 0) vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup" :count 0) :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0) :compute vmfest)
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0) :compute vmfest)
+(use '[pallet.crate.automated-admin-user :only [automated-admin-user]])
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0) :compute vmfest)
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.core/converge
+  "mygroup2" 
+    (pallet.core/group-spec "mygroup"  :count 1 :phases {:bootstrap automated-admin-user})
+  :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0) :compute vmfest)
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup2" :count 0) :compute vmfest)
+(pallet.core/converge mygroup-up :compute vmfest)
+(pallet.compute/nodes vmfest)
+c(def mygroup
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(def mygroup
+    (pallet.core/group-spec "mygroup" :count 1 :node-spec mynode))
+(add-image vmfest "../vmfest/resources/lubuntu.vdi" :model-name "tutorial1")
+(def mynode 
+(pallet.core/node-spec :image {:image-id "tutorial1"}))
+(def mygroup
+    (pallet.core/group-spec "mygroup" :count 1 :node-spec mynode))
+(pallet.core/converge mygroup :compute vmfest)
+(pallet.compute/nodes vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup" :count 0) :compute vmfest)
+(pallet.core/converge
+    (pallet.core/group-spec "mygroup" :count 1 :phases {:bootstrap automated-admin-user})
+  :compute vmfest)
+(pallet.core/converge
+    (pallet.core/group-spec "mygroup" :count 1 :node-spec mynode :phases {:bootstrap automated-admin-user})
+  :compute vmfest)
+(load-file "src/tutorial01.clj")
+(pallet.core/converge mygroup :compute vmfest)
+(ns tutorial)
+(pallet.core/converge mygroup :compute vmfest)
+(def mynode 
+(pallet.core/node-spec :image {:image-id "tutorial1"}))
+(def mygroup
+    (pallet.core/group-spec "mygroup" :count 1 :node-spec mynode))
+(pallet.core/converge mygroup :compute vmfest)
+(def vmfest (compute-service "vmfest" nil nil))
+(use '[pallet.configure :only [compute-service]])
+(def vmfest (compute-service "vmfest" nil nil))
+(pallet.core/converge mygroup :compute vmfest)
+(pallet.compute/nodes vmfest)
+(pallet.core/converge (pallet.core/group-spec "mygroup" :count 0) :compute vmfest)
+(use '[pallet.crate.automated-admin-user :only [automated-admin-user]])
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode)
+   :phases {:bootstrap automated-admin-user})
+  :compute vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user})
+  :compute vmfest)
+(pallet.compute/nodes vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(use '[pallet.action.package :only [package]]
+     '[pallet.phase :only [phase-fn]])
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(use '[pallet.configure :only [compute-service]])
+; Returns a compute service object, used to perform actions on a cloud provider.
+(def vmfest (compute-service "vmfest" nil nil))
+(def mynode 
+(pallet.core/node-spec :image {:image-id "tutorial1"}))
+(require 'pallet.core 'pallet.compute 'pallet.configure)
+(def mynode 
+(pallet.core/node-spec :image {:image-id "tutorial1"}))
+(def mygroup
+    (pallet.core/group-spec "mygroup" :count 1 :node-spec mynode))
+(use '[pallet.crate.automated-admin-user :only [automated-admin-user]])
+(use '[pallet.action.package :only [package]]
+     '[pallet.phase :only [phase-fn]])
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(require 'pallet.session)
+*session*
+session
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(pallet.core/nodes vmfest)
+(pallet.compute/nodes vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)
+(pallet.core/converge
+  (pallet.core/group-spec "mygroup"
+   :count 1
+   :node-spec mynode
+   :phases {:bootstrap automated-admin-user :configure (phase-fn (package "curl"))})
+  :compute vmfest)

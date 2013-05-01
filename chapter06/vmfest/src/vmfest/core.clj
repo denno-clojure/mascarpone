@@ -47,3 +47,6 @@
 ;; any trace of it's existence. Your data will be lost, but not the
 ;; original image this VM was booted off.
 (destroy my-machine)
+
+;; for debugging, the following gives you a nice maps of metadata
+(load-models)

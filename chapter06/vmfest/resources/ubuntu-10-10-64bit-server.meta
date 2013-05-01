@@ -5,8 +5,8 @@
 		 :no-sudo false,
 		 :packager :apt,
 		 :username "vmfest",
-		 :os-version "12.04",
-		 :os-64-bit false,
+		 :os-version "10.10",
+		 :os-64-bit true,
 		 :password "vmfest",
          :network [{:attachment-type :bridged
                     :bridged-interface "en1: Wi-Fi (AirPort)"}
