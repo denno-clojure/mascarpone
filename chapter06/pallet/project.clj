@@ -4,7 +4,7 @@
                  [vmfest "0.2.8"]
                  [org.cloudhoist/pallet-vmfest "0.3.0-alpha.3"]
 
-                 [org.clojure/clojure "1.5.1"]
+                 [org.clojure/clojure "1.4.0"]
                  [org.cloudhoist/pallet "0.7.4"]
                  [org.cloudhoist/pallet-jclouds "1.5.2"]
                  ;; To get started we include all jclouds compute providers.

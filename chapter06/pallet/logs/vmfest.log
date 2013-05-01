@@ -69,3 +69,96 @@
 2013-05-01 01:22:28,029 INFO [nREPL-worker-2] v.v.image tutorial:Loading metadata from ../vmfest/resources/lubuntu.meta
 2013-05-01 01:22:28,052 INFO [nREPL-worker-2] v.v.image tutorial:Registering image /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi as /Users/niko/.vmfest/models/vmfest-tutorial.vdi in vmfest.virtualbox.model.Server@49718d22
 2013-05-01 01:23:12,575 INFO [nREPL-worker-2] v.v.image tutorial:Creating meta file /Users/niko/.vmfest/models/vmfest-tutorial.meta with {:tutorial {:uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 01:54:42,294 INFO [nREPL-worker-1] v.v.image About to execute job 
+{:image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi",
+ :temp-dir
+ #<File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial>,
+ :model-meta "/Users/niko/.vmfest/models/vmfest-tutorial.meta",
+ :vbox
+ {:url "http://localhost:18083/", :username "test", :password "test"},
+ :model-name "tutorial",
+ :image-name "lubuntu",
+ :gzipped? false,
+ :gzipped-image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial/lubuntu.vdi",
+ :meta nil,
+ :model-file "/Users/niko/.vmfest/models/vmfest-tutorial.vdi",
+ :image-file-name "lubuntu.vdi",
+ :model-path "/Users/niko/.vmfest/models",
+ :meta-url "../vmfest/resources/lubuntu.meta",
+ :image-url "../vmfest/resources/lubuntu.vdi"}
+
+2013-05-01 01:54:42,295 ERROR [nREPL-worker-1] v.v.image The model /Users/niko/.vmfest/models/vmfest-tutorial.vdi already exists. Manually specifiy another file name with :model-name
+2013-05-01 01:55:27,191 INFO [nREPL-worker-1] v.v.image About to execute job 
+{:image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial-1/lubuntu.vdi",
+ :temp-dir
+ #<File /var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial-1>,
+ :model-meta "/Users/niko/.vmfest/models/vmfest-tutorial.meta",
+ :vbox
+ {:url "http://localhost:18083/", :username "test", :password "test"},
+ :model-name "tutorial",
+ :image-name "lubuntu",
+ :gzipped? false,
+ :gzipped-image-file
+ "/var/folders/fr/nnf8nywx2fj8nlgldpbn9_7c0000gn/T/vmfest-vmfest-tutorial-1/lubuntu.vdi",
+ :meta nil,
+ :model-file "/Users/niko/.vmfest/models/vmfest-tutorial.vdi",
+ :image-file-name "lubuntu.vdi",
+ :model-path "/Users/niko/.vmfest/models",
+ :meta-url "../vmfest/resources/lubuntu.meta",
+ :image-url "../vmfest/resources/lubuntu.vdi"}
+
+2013-05-01 01:55:27,191 ERROR [nREPL-worker-1] v.v.image The model /Users/niko/.vmfest/models/vmfest-tutorial.vdi already exists. Manually specifiy another file name with :model-name
+2013-05-01 02:08:15,329 INFO [clojure-agent-send-off-pool-9] v.v.virtualbox create-machine: Creating machine mygroup-0 in /Users/niko/.vmfest/nodes/vmfest/mygroup-0/mygroup-0.vbox,  overwriting previous contents
+2013-05-01 02:08:15,335 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring network for machine mygroup-0 with [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}]
+2013-05-01 02:08:15,342 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring adapter 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:08:15,343 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-0' slot 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:08:15,373 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring adapter 1 with {:attachment-type :nat}
+2013-05-01 02:08:15,374 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-0' slot 1 with {:attachment-type :nat}
+2013-05-01 02:08:15,389 DEBUG [clojure-agent-send-off-pool-9] v.manager Configuring storage for {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage ({:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}), :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:08:15,423 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring storage for machine mygroup-0: clojure.lang.LazySeq@cdfb6158
+2013-05-01 02:08:15,423 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring controller for {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:08:15,425 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-controller: Configuring controller for machine 'mygroup-0': {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:08:15,426 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config add-storage-controller: m=org.virtualbox_4_2.IMachine@16e5c1c name='IDE Controller' storage-bus IDE
+2013-05-01 02:08:15,431 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-devices: Attaching devices to mygroup-0 in controller IDE Controller: [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil]
+2013-05-01 02:08:15,435 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-device: Attaching {:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} in controller IDE Controller slot 0 port 0 for machine mygroup-0
+2013-05-01 02:08:15,446 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-device: Attaching {:device-type :dvd} in controller IDE Controller slot 0 port 1 for machine mygroup-0
+2013-05-01 02:08:15,525 DEBUG [clojure-agent-send-off-pool-9] v.v.virtualbox find-vb-m: found machine '4e105737-e020-4825-b83a-63e195e554c8': org.virtualbox_4_2.IMachine@4b826874
+2013-05-01 02:08:15,529 DEBUG [clojure-agent-send-off-pool-9] v.v.machine start: Starting session for VM 4e105737-e020-4825-b83a-63e195e554c8...
+2013-05-01 02:08:15,780 DEBUG [clojure-agent-send-off-pool-9] v.v.machine start: VM 4e105737-e020-4825-b83a-63e195e554c8 started with result code 0
+2013-05-01 02:20:41,997 INFO [clojure-agent-send-off-pool-7] v.v.virtualbox create-machine: Creating machine mygroup-1 in /Users/niko/.vmfest/nodes/vmfest/mygroup-1/mygroup-1.vbox,  overwriting previous contents
+2013-05-01 02:20:42,004 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config Configuring network for machine mygroup-1 with [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}]
+2013-05-01 02:20:42,010 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config Configuring adapter 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:20:42,012 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-1' slot 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:20:42,040 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config Configuring adapter 1 with {:attachment-type :nat}
+2013-05-01 02:20:42,041 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-1' slot 1 with {:attachment-type :nat}
+2013-05-01 02:20:42,056 DEBUG [clojure-agent-send-off-pool-7] v.manager Configuring storage for {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage ({:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}), :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:20:42,094 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config Configuring storage for machine mygroup-1: clojure.lang.LazySeq@cdfb6158
+2013-05-01 02:20:42,095 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config Configuring controller for {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:20:42,097 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config configure-controller: Configuring controller for machine 'mygroup-1': {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:20:42,098 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config add-storage-controller: m=org.virtualbox_4_2.IMachine@48360df4 name='IDE Controller' storage-bus IDE
+2013-05-01 02:20:42,103 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config attach-devices: Attaching devices to mygroup-1 in controller IDE Controller: [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil]
+2013-05-01 02:20:42,106 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config attach-device: Attaching {:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} in controller IDE Controller slot 0 port 0 for machine mygroup-1
+2013-05-01 02:20:42,118 DEBUG [clojure-agent-send-off-pool-7] v.v.machine-config attach-device: Attaching {:device-type :dvd} in controller IDE Controller slot 0 port 1 for machine mygroup-1
+2013-05-01 02:20:42,196 DEBUG [clojure-agent-send-off-pool-7] v.v.virtualbox find-vb-m: found machine 'a85f6ef4-fe4d-4ada-bb8d-9c33fb633bfa': org.virtualbox_4_2.IMachine@43ecb217
+2013-05-01 02:20:42,200 DEBUG [clojure-agent-send-off-pool-7] v.v.machine start: Starting session for VM a85f6ef4-fe4d-4ada-bb8d-9c33fb633bfa...
+2013-05-01 02:20:42,420 DEBUG [clojure-agent-send-off-pool-7] v.v.machine start: VM a85f6ef4-fe4d-4ada-bb8d-9c33fb633bfa started with result code 0
+2013-05-01 02:23:25,258 INFO [clojure-agent-send-off-pool-9] v.v.virtualbox create-machine: Creating machine mygroup-2 in /Users/niko/.vmfest/nodes/vmfest/mygroup-2/mygroup-2.vbox,  overwriting previous contents
+2013-05-01 02:23:25,262 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring network for machine mygroup-2 with [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}]
+2013-05-01 02:23:25,265 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring adapter 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:23:25,266 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-2' slot 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-05-01 02:23:25,286 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring adapter 1 with {:attachment-type :nat}
+2013-05-01 02:23:25,288 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-adapter: Configuring network adapter for machine 'mygroup-2' slot 1 with {:attachment-type :nat}
+2013-05-01 02:23:25,302 DEBUG [clojure-agent-send-off-pool-9] v.manager Configuring storage for {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage ({:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}), :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:23:25,325 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring storage for machine mygroup-2: clojure.lang.LazySeq@cdfb6158
+2013-05-01 02:23:25,326 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config Configuring controller for {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:23:25,327 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config configure-controller: Configuring controller for machine 'mygroup-2': {:devices [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}
+2013-05-01 02:23:25,327 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config add-storage-controller: m=org.virtualbox_4_2.IMachine@c366c00 name='IDE Controller' storage-bus IDE
+2013-05-01 02:23:25,329 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-devices: Attaching devices to mygroup-2 in controller IDE Controller: [{:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} nil {:device-type :dvd} nil]
+2013-05-01 02:23:25,331 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-device: Attaching {:device-type :hard-disk, :location "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :attachment-type :multi-attach} in controller IDE Controller slot 0 port 0 for machine mygroup-2
+2013-05-01 02:23:25,340 DEBUG [clojure-agent-send-off-pool-9] v.v.machine-config attach-device: Attaching {:device-type :dvd} in controller IDE Controller slot 0 port 1 for machine mygroup-2
+2013-05-01 02:23:25,410 DEBUG [clojure-agent-send-off-pool-9] v.v.virtualbox find-vb-m: found machine 'c1ae6de8-6630-4be8-93cb-35acc4a97ac9': org.virtualbox_4_2.IMachine@56183540
+2013-05-01 02:23:25,414 DEBUG [clojure-agent-send-off-pool-9] v.v.machine start: Starting session for VM c1ae6de8-6630-4be8-93cb-35acc4a97ac9...
+2013-05-01 02:23:25,633 DEBUG [clojure-agent-send-off-pool-9] v.v.machine start: VM c1ae6de8-6630-4be8-93cb-35acc4a97ac9 started with result code 0

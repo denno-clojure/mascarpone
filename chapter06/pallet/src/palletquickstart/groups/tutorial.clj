@@ -1,24 +1,39 @@
-(ns tutorial)
+(ns tutorial
+  (:use [clojure.pprint]))
 
 ; prepare vmfest/virtual box
 (use '[pallet.configure :only [compute-service]])
 (def vmfest (compute-service "vmfest" nil nil))
+; also keeps the vmfest for future reference
 
 (use '[pallet.compute.vmfest :only [add-image]])
-(add-image vmfest "../vmfest/resources/lubuntu.vdi" :model-name "tutorial")
+; duplicates ... 
+; (add-image vmfest "../vmfest/resources/lubuntu.vdi" :model-name "tutorial")
 
-; now get ready to integrate with pallet
-(require 'pallet.core 'pallet.compute 'pallet.configure)
+; (use '[pallet.compute :only [images]])
+(pprint (pallet.compute/images vmfest))
 
-(pprint (images vmfest))
+(def mynode 
+	(pallet.core/node-spec :image {:image-id "lubuntu"}))
+(pprint mynode)
 
-; (pallet.core/group-spec "mygroup"
-;   :count 1
-;   :node-spec (pallet.core/node-spec
-;               :image {:os-family :ubuntu :image-id "us-east-1/ami-3c994355"}))
+(def mygroup-up
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode))
+(pprint mygroup-up)
 
-(def mygroup
-    (group-spec "mygroup" 
-         :node-spec {:image {:image-id "lubuntu"}}))
+; http://www.raynes.me/logs/irc.freenode.net/pallet/2012-09-09.txt
 
-(pallet.core/converge mygroup :compute (pallet.configure/compute-service :vmfest))
+; WORKS !
+; (pallet.core/converge mygroup-up :compute vmfest)
+
+; (def mygroup-down
+;     (pallet.core/group-spec "mygroup" :count 0 :node-spec mynode))
+; (pallet.core/converge mygroup-down :compute vmfest)
+
+(use '[pallet.crate.automated-admin-user :only [automated-admin-user]])
+(def mygroup-2
+    (pallet.core/group-spec "mygroup"  :count 1 :node-spec mynode :phases {:bootstrap automated-admin-user}))
+
+(pallet.core/converge
+  mygroup-2
+  :compute vmfest)

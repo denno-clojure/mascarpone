@@ -1,0 +1,2 @@
+VBoxManage setproperty websrvauthlibrary null
+vboxwebsrv -t0

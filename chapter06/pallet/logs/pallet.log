@@ -50,3 +50,619 @@
 2013-05-01 01:22:19,654 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
 2013-05-01 01:22:19,654 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
 2013-05-01 01:22:19,656 DEBUG [nREPL-worker-2] p.c.vmfest installing image to /Users/niko/.vmfest/models with options {:model-name "tutorial"}
+2013-05-01 01:54:38,595 DEBUG [nREPL-worker-1] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 01:54:41,716 DEBUG [nREPL-worker-1] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:54:41,721 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 01:54:42,204 INFO [nREPL-worker-1] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 01:54:42,205 DEBUG [nREPL-worker-1] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:54:42,205 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 01:54:42,206 DEBUG [nREPL-worker-1] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:54:42,212 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:54:42,213 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:54:42,213 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:54:42,213 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:54:42,216 DEBUG [nREPL-worker-1] p.c.vmfest installing image to /Users/niko/.vmfest/models with options {:model-name "tutorial"}
+2013-05-01 01:55:27,103 DEBUG [nREPL-worker-1] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 01:55:27,104 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 01:55:27,160 INFO [nREPL-worker-1] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 01:55:27,160 DEBUG [nREPL-worker-1] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 01:55:27,160 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 01:55:27,160 DEBUG [nREPL-worker-1] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 01:55:27,160 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 01:55:27,161 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 01:55:27,161 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 01:55:27,161 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 01:55:27,162 DEBUG [nREPL-worker-1] p.c.vmfest installing image to /Users/niko/.vmfest/models with options {:model-name "tutorial"}
+2013-05-01 01:57:45,073 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 01:57:45,079 INFO [nREPL-worker-2] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 01:57:45,084 INFO [nREPL-worker-2] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 01:57:45,087 INFO [nREPL-worker-2] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 01:57:45,091 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 01:57:45,091 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 01:57:45,092 INFO [nREPL-worker-2] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 01:57:45,092 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 01:57:45,092 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 01:57:45,092 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 01:57:45,093 INFO [clojure-agent-send-off-pool-1] p.core adjust-server-count :mygroup
+2013-05-01 01:57:45,094 INFO [clojure-agent-send-off-pool-1] p.core Starting 1 nodes for :mygroup, os-family null
+2013-05-01 01:57:45,100 ERROR [nREPL-worker-2] p.futures Adjust node count exception: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:541) ~[clojure-1.5.1.jar:na]
+	at pallet.compute$eval2443$fn__2472$G__2426__2479.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__10252.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.5.1.jar:na]
+	at clojure.core$apply.invoke(core.clj:619) ~[clojure-1.5.1.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5587) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.5.1.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__10315$fn__10316.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__4107.invoke(core.clj:1836) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.5.1.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 01:57:45,102 DEBUG [nREPL-worker-2] p.futures Adjust node count exception
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:541) ~[clojure-1.5.1.jar:na]
+	at pallet.compute$eval2443$fn__2472$G__2426__2479.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__10252.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.5.1.jar:na]
+	at clojure.core$apply.invoke(core.clj:619) ~[clojure-1.5.1.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5587) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.5.1.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__10315$fn__10316.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__4107.invoke(core.clj:1836) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.5.1.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 01:57:45,102 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 01:57:45,104 INFO [nREPL-worker-2] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 01:57:45,105 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 01:57:45,105 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 01:57:45,106 INFO [nREPL-worker-2] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 01:57:45,106 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 01:57:45,106 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 01:57:45,107 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 01:57:45,107 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 01:57:45,107 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 01:57:45,107 INFO [nREPL-worker-2] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 01:57:45,107 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 01:57:45,108 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 01:57:45,108 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 01:58:26,140 DEBUG [nREPL-worker-3] p.core pallet version: 0.7.4
+2013-05-01 01:58:26,140 INFO [nREPL-worker-3] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 01:58:26,141 INFO [nREPL-worker-3] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 01:58:26,141 INFO [nREPL-worker-3] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 01:58:26,141 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 01:58:26,141 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 01:58:26,142 INFO [nREPL-worker-3] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 01:58:26,142 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 01:58:26,142 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 01:58:26,142 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 01:58:26,142 INFO [clojure-agent-send-off-pool-1] p.core adjust-server-count :mygroup
+2013-05-01 01:58:26,143 INFO [clojure-agent-send-off-pool-1] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 01:58:26,145 ERROR [nREPL-worker-3] p.futures Adjust node count exception: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:541) ~[clojure-1.5.1.jar:na]
+	at pallet.compute$eval2443$fn__2472$G__2426__2479.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__10252.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.5.1.jar:na]
+	at clojure.core$apply.invoke(core.clj:619) ~[clojure-1.5.1.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5587) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.5.1.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__10315$fn__10316.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__4107.invoke(core.clj:1836) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.5.1.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 01:58:26,147 DEBUG [nREPL-worker-3] p.futures Adjust node count exception
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:541) ~[clojure-1.5.1.jar:na]
+	at pallet.compute$eval2443$fn__2472$G__2426__2479.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__10252.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.5.1.jar:na]
+	at clojure.core$apply.invoke(core.clj:619) ~[clojure-1.5.1.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5587) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.5.1.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__10315$fn__10316.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__4107.invoke(core.clj:1836) ~[clojure-1.5.1.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.5.1.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 01:58:26,147 DEBUG [nREPL-worker-3] p.core pallet version: 0.7.4
+2013-05-01 01:58:26,147 INFO [nREPL-worker-3] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 01:58:26,147 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 01:58:26,147 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 01:58:26,148 INFO [nREPL-worker-3] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 01:58:26,149 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 01:58:26,149 INFO [nREPL-worker-3] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 01:58:26,149 INFO [nREPL-worker-3] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 02:00:15,379 DEBUG [nREPL-worker-0] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 02:00:18,748 DEBUG [nREPL-worker-0] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 02:00:18,752 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 02:00:19,525 INFO [nREPL-worker-0] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 02:00:19,526 DEBUG [nREPL-worker-0] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 02:00:19,526 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 02:00:19,526 DEBUG [nREPL-worker-0] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 02:00:19,535 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:00:19,535 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 02:00:19,536 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 02:00:19,536 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 02:02:56,708 DEBUG [nREPL-worker-0] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 02:02:59,964 DEBUG [nREPL-worker-0] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 02:02:59,967 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 02:03:00,451 INFO [nREPL-worker-0] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 02:03:00,452 DEBUG [nREPL-worker-0] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 02:03:00,452 DEBUG [nREPL-worker-0] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 02:03:00,453 DEBUG [nREPL-worker-0] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 02:03:00,463 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:03:00,464 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 02:03:00,464 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 02:03:00,464 DEBUG [nREPL-worker-0] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 02:03:01,082 DEBUG [nREPL-worker-0] p.core pallet version: 0.7.4
+2013-05-01 02:03:01,087 INFO [nREPL-worker-0] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 02:03:01,092 INFO [nREPL-worker-0] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 02:03:01,094 INFO [nREPL-worker-0] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 02:03:01,096 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:03:01,097 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:03:01,097 INFO [nREPL-worker-0] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 02:03:01,097 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 02:03:01,097 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:03:01,098 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:03:01,099 INFO [clojure-agent-send-off-pool-1] p.core adjust-server-count :mygroup
+2013-05-01 02:03:01,100 INFO [clojure-agent-send-off-pool-1] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 02:03:01,106 ERROR [nREPL-worker-0] p.futures Adjust node count exception: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:527) ~[clojure-1.4.0.jar:na]
+	at pallet.compute$eval2303$fn__2332$G__2286__2339.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__9731.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.4.0.jar:na]
+	at clojure.core$apply.invoke(core.clj:603) ~[clojure-1.4.0.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5472) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.4.0.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9793$fn__9794.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:03:01,109 DEBUG [nREPL-worker-0] p.futures Adjust node count exception
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:527) ~[clojure-1.4.0.jar:na]
+	at pallet.compute$eval2303$fn__2332$G__2286__2339.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__9731.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.4.0.jar:na]
+	at clojure.core$apply.invoke(core.clj:603) ~[clojure-1.4.0.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5472) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.4.0.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9793$fn__9794.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:03:01,110 DEBUG [nREPL-worker-0] p.core pallet version: 0.7.4
+2013-05-01 02:03:01,112 INFO [nREPL-worker-0] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 02:03:01,113 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 02:03:01,113 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 02:03:01,114 INFO [nREPL-worker-0] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 02:03:01,115 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 02:03:01,115 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 02:03:01,115 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 02:03:01,116 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 02:03:01,116 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 02:03:01,116 INFO [nREPL-worker-0] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 02:03:01,116 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 02:03:01,116 INFO [nREPL-worker-0] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 02:03:01,117 INFO [nREPL-worker-0] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 02:05:50,408 DEBUG [nREPL-worker-1] p.core pallet version: 0.7.4
+2013-05-01 02:05:50,408 INFO [nREPL-worker-1] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 02:05:50,409 INFO [nREPL-worker-1] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 02:05:50,409 INFO [nREPL-worker-1] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 02:05:50,410 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:05:50,410 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:05:50,410 INFO [nREPL-worker-1] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 02:05:50,410 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 02:05:50,411 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:05:50,411 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:05:50,411 INFO [clojure-agent-send-off-pool-7] p.core adjust-server-count :mygroup
+2013-05-01 02:05:50,411 INFO [clojure-agent-send-off-pool-7] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 02:05:50,414 ERROR [nREPL-worker-1] p.futures Adjust node count exception: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:527) ~[clojure-1.4.0.jar:na]
+	at pallet.compute$eval2303$fn__2332$G__2286__2339.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__9731.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.4.0.jar:na]
+	at clojure.core$apply.invoke(core.clj:603) ~[clojure-1.4.0.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5472) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.4.0.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9793$fn__9794.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:05:50,417 DEBUG [nREPL-worker-1] p.futures Adjust node count exception
+java.lang.IllegalArgumentException: No implementation of method: :ensure-os-family of protocol: #'pallet.compute/ComputeService found for class: nil
+	at clojure.core$_cache_protocol_fn.invoke(core_deftype.clj:527) ~[clojure-1.4.0.jar:na]
+	at pallet.compute$eval2303$fn__2332$G__2286__2339.invoke(compute.clj:49) ~[na:na]
+	at pallet.core$create_nodes$fn__9731.invoke(core.clj:837) ~[na:na]
+	at clojure.lang.AFn.applyToHelper(AFn.java:161) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.applyTo(AFn.java:151) ~[clojure-1.4.0.jar:na]
+	at clojure.core$apply.invoke(core.clj:603) ~[clojure-1.4.0.jar:na]
+	at clojure.core$update_in.doInvoke(core.clj:5472) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.RestFn.invoke(RestFn.java:445) ~[clojure-1.4.0.jar:na]
+	at pallet.core$create_nodes.invoke(core.clj:836) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9793$fn__9794.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:05:50,417 DEBUG [nREPL-worker-1] p.core pallet version: 0.7.4
+2013-05-01 02:05:50,418 INFO [nREPL-worker-1] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 02:05:50,418 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 02:05:50,418 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 02:05:50,418 INFO [nREPL-worker-1] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 02:05:50,419 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 02:05:50,420 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 02:05:50,420 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 02:07:47,506 DEBUG [nREPL-worker-2] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 02:07:47,507 DEBUG [nREPL-worker-2] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 02:07:47,564 INFO [nREPL-worker-2] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 02:07:47,564 DEBUG [nREPL-worker-2] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 02:07:47,564 DEBUG [nREPL-worker-2] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 02:07:47,564 DEBUG [nREPL-worker-2] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 02:07:47,565 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:07:47,565 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 02:07:47,565 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 02:07:47,565 DEBUG [nREPL-worker-2] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 02:08:15,247 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 02:08:15,247 INFO [nREPL-worker-2] p.core retrieving nodes
+2013-05-01 02:08:15,284 INFO [nREPL-worker-2] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 02:08:15,285 INFO [nREPL-worker-2] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 02:08:15,285 INFO [nREPL-worker-2] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 02:08:15,285 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:08:15,285 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:08:15,285 INFO [nREPL-worker-2] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 02:08:15,286 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 02:08:15,286 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:08:15,286 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:08:15,286 INFO [clojure-agent-send-off-pool-8] p.core adjust-server-count :mygroup
+2013-05-01 02:08:15,286 INFO [clojure-agent-send-off-pool-8] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 02:08:15,287 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest ensure-os-family called with group-spec = {:group-name :mygroup, :delta-count 1, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}
+2013-05-01 02:08:15,288 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:08:15,294 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest run-nodes with template {:os-family :ubuntu, :image-id "lubuntu"}
+2013-05-01 02:08:15,295 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest current-machine-names #{}
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machine-names #{"mygroup-0"}
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machines-already-existing #{}
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machines-to-create#{"mygroup-0"}
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Selected image: :lubuntu
+2013-05-01 02:08:15,322 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Hardware model {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:08:15,793 DEBUG [clojure-agent-send-off-pool-9] p.c.vmfest Waiting 300000 ms for the IP in slot 0 of mygroup-0 to come up.
+2013-05-01 02:08:25,909 DEBUG [clojure-agent-send-off-pool-9] p.c.vmfest Waiting 300000 ms for the IP in slot 1 of mygroup-0 to come up.
+2013-05-01 02:09:20,333 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 02:09:20,353 INFO [nREPL-worker-2] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 02:09:20,373 WARN [nREPL-worker-2] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 02:13:23,263 DEBUG [nREPL-worker-5] p.core pallet version: 0.7.4
+2013-05-01 02:13:23,263 INFO [nREPL-worker-5] p.core retrieving nodes
+2013-05-01 02:13:23,321 WARN [nREPL-worker-5] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 02:15:00,871 DEBUG [nREPL-worker-7] p.core pallet version: 0.7.4
+2013-05-01 02:15:00,871 INFO [nREPL-worker-7] p.core retrieving nodes
+2013-05-01 02:15:00,927 WARN [nREPL-worker-7] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 02:15:39,486 DEBUG [nREPL-worker-8] p.core pallet version: 0.7.4
+2013-05-01 02:15:39,487 INFO [nREPL-worker-8] p.core retrieving nodes
+2013-05-01 02:15:39,544 WARN [nREPL-worker-8] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 02:19:19,605 DEBUG [nREPL-worker-1] p.c.v.properties The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+2013-05-01 02:19:22,921 DEBUG [nREPL-worker-1] p.c.vmfest Loading images from /Users/niko/.vmfest/models
+2013-05-01 02:19:22,928 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images (:tutorial :nico :lubuntu)
+2013-05-01 02:19:23,633 INFO [nREPL-worker-1] p.c.vmfest No :default-bridged-interface defined. Will chose from these options: en1: Wi-Fi (AirPort)
+2013-05-01 02:19:23,634 DEBUG [nREPL-worker-1] p.c.vmfest No Local Interface defined. Using vboxnet0
+2013-05-01 02:19:23,634 DEBUG [nREPL-worker-1] p.c.vmfest Loaded images: (:lubuntu :nico :tutorial)
+2013-05-01 02:19:23,634 DEBUG [nREPL-worker-1] p.c.vmfest Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+2013-05-01 02:19:23,640 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:19:23,641 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+2013-05-01 02:19:23,641 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+2013-05-01 02:19:23,641 DEBUG [nREPL-worker-1] p.c.vmfest loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+2013-05-01 02:20:41,813 DEBUG [nREPL-worker-1] p.core pallet version: 0.7.4
+2013-05-01 02:20:41,814 INFO [nREPL-worker-1] p.core retrieving nodes
+2013-05-01 02:20:41,876 INFO [nREPL-worker-1] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 02:20:41,882 INFO [nREPL-worker-1] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 02:20:41,883 INFO [nREPL-worker-1] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 02:20:41,886 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:20:41,887 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:20:41,887 INFO [nREPL-worker-1] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 02:20:41,887 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 02:20:41,888 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:20:41,888 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:20:41,889 INFO [clojure-agent-send-off-pool-1] p.core adjust-server-count :mygroup
+2013-05-01 02:20:41,890 INFO [clojure-agent-send-off-pool-1] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 02:20:41,895 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest ensure-os-family called with group-spec = {:group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}
+2013-05-01 02:20:41,896 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:20:41,948 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest run-nodes with template {:os-family :ubuntu, :image-id "lubuntu"}
+2013-05-01 02:20:41,949 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest current-machine-names #{"mygroup-0"}
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest target-machine-names #{"mygroup-0" "mygroup-1"}
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest target-machines-already-existing #{"mygroup-0"}
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest target-machines-to-create#{"mygroup-1"}
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest Selected image: :lubuntu
+2013-05-01 02:20:41,989 DEBUG [clojure-agent-send-off-pool-1] p.c.vmfest Hardware model {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:20:42,432 DEBUG [clojure-agent-send-off-pool-7] p.c.vmfest Waiting 300000 ms for the IP in slot 0 of mygroup-1 to come up.
+2013-05-01 02:20:52,557 DEBUG [clojure-agent-send-off-pool-7] p.c.vmfest Waiting 300000 ms for the IP in slot 1 of mygroup-1 to come up.
+2013-05-01 02:21:06,673 INFO [clojure-agent-send-off-pool-7] p.c.vmfest Bootstrapping 192.168.56.105
+2013-05-01 02:21:06,886 ERROR [clojure-agent-send-off-pool-1] p.futures Start of node exception: Connection refused
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0-ea]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:578) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:527) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:423) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:207) ~[na:1.8.0-ea]
+	at com.jcraft.jsch.Util.createSocket(Util.java:338) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:194) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:162) ~[jsch-0.1.49.jar:na]
+	at clj_ssh.ssh$connect.invoke(ssh.clj:300) ~[na:na]
+	at pallet.execute$remote_sudo.invoke(execute.clj:332) ~[na:na]
+	at clojure.lang.Var.invoke(Var.java:427) ~[clojure-1.4.0.jar:na]
+	at pallet.compute.vmfest$ssh_script_on_target.invoke(vmfest.clj:200) ~[na:na]
+	at pallet.compute.vmfest$bootstrap_via_ssh.invoke(vmfest.clj:515) ~[na:na]
+	at pallet.compute.vmfest$create_node$fn__8596.invoke(vmfest.clj:569) ~[na:na]
+	at pallet.compute.vmfest$create_node.invoke(vmfest.clj:559) ~[na:na]
+	at pallet.compute.vmfest$parallel_create_nodes$iter__8656__8660$fn__8661$fn__8666.invoke(vmfest.clj:668) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) [clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) [clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:21:06,891 DEBUG [clojure-agent-send-off-pool-1] p.futures Start of node exception
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused
+	at com.jcraft.jsch.Util.createSocket(Util.java:344) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:194) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:162) ~[jsch-0.1.49.jar:na]
+	at clj_ssh.ssh$connect.invoke(ssh.clj:300) ~[na:na]
+	at pallet.execute$remote_sudo.invoke(execute.clj:332) ~[na:na]
+	at clojure.lang.Var.invoke(Var.java:427) ~[clojure-1.4.0.jar:na]
+	at pallet.compute.vmfest$ssh_script_on_target.invoke(vmfest.clj:200) ~[na:na]
+	at pallet.compute.vmfest$bootstrap_via_ssh.invoke(vmfest.clj:515) ~[na:na]
+	at pallet.compute.vmfest$create_node$fn__8596.invoke(vmfest.clj:569) ~[na:na]
+	at pallet.compute.vmfest$create_node.invoke(vmfest.clj:559) ~[na:na]
+	at pallet.compute.vmfest$parallel_create_nodes$iter__8656__8660$fn__8661$fn__8666.invoke(vmfest.clj:668) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) [clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) [clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0-ea]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:578) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:527) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:423) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:207) ~[na:1.8.0-ea]
+	at com.jcraft.jsch.Util.createSocket(Util.java:338) ~[jsch-0.1.49.jar:na]
+	... 16 common frames omitted
+2013-05-01 02:21:06,909 ERROR [nREPL-worker-1] p.futures Adjust node count exception: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+clojure.lang.ExceptionInfo: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+	at pallet.core$create_nodes.invoke(core.clj:847) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9803$fn__9804.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:21:06,911 DEBUG [nREPL-worker-1] p.futures Adjust node count exception
+clojure.lang.ExceptionInfo: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+	at pallet.core$create_nodes.invoke(core.clj:847) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9803$fn__9804.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:21:06,912 DEBUG [nREPL-worker-1] p.core pallet version: 0.7.4
+2013-05-01 02:21:06,914 INFO [nREPL-worker-1] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 02:21:06,915 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 02:21:06,915 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 02:21:06,916 INFO [nREPL-worker-1] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 02:21:06,916 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 02:21:06,917 INFO [nREPL-worker-1] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 02:21:06,918 INFO [nREPL-worker-1] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 02:23:25,140 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 02:23:25,141 INFO [nREPL-worker-2] p.core retrieving nodes
+2013-05-01 02:23:25,191 INFO [nREPL-worker-2] p.core lift-nodes phases [:destroy-server], groups []
+2013-05-01 02:23:25,192 INFO [nREPL-worker-2] p.core lift-group-phase phases [:destroy-group], groups []
+2013-05-01 02:23:25,192 INFO [nREPL-worker-2] p.core lift-group-phase phases [:create-group], groups [:mygroup]
+2013-05-01 02:23:25,192 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:23:25,193 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/pre-create-group for :mygroup
+2013-05-01 02:23:25,193 INFO [nREPL-worker-2] p.core parallel-apply-phase :create-group for :mygroup
+2013-05-01 02:23:25,193 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :create-group for :mygroup
+2013-05-01 02:23:25,193 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:23:25,194 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :group  :pallet.phase/post-create-group for :mygroup
+2013-05-01 02:23:25,194 INFO [clojure-agent-send-off-pool-8] p.core adjust-server-count :mygroup
+2013-05-01 02:23:25,194 INFO [clojure-agent-send-off-pool-8] p.core Starting 1 nodes for :mygroup, os-family :ubuntu
+2013-05-01 02:23:25,195 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest ensure-os-family called with group-spec = {:group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}
+2013-05-01 02:23:25,195 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:23:25,202 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest run-nodes with template {:os-family :ubuntu, :image-id "lubuntu"}
+2013-05-01 02:23:25,203 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Looking for {:os-family :ubuntu, :image-id "lubuntu"} in {:lubuntu {:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :nico {:image-id "nico", :image-name "nico", :uuid "/Users/niko/.vmfest/models/vmfest-nico.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}, :tutorial {:image-id "tutorial", :image-name "tutorial", :uuid "/Users/niko/.vmfest/models/vmfest-tutorial.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}}
+2013-05-01 02:23:25,253 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest current-machine-names #{"mygroup-0" "mygroup-1"}
+2013-05-01 02:23:25,253 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machine-names #{"mygroup-0" "mygroup-1" "mygroup-2"}
+2013-05-01 02:23:25,253 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machines-already-existing #{"mygroup-0" "mygroup-1"}
+2013-05-01 02:23:25,253 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest target-machines-to-create#{"mygroup-2"}
+2013-05-01 02:23:25,254 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Selected image: :lubuntu
+2013-05-01 02:23:25,254 DEBUG [clojure-agent-send-off-pool-8] p.c.vmfest Hardware model {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+2013-05-01 02:23:25,641 DEBUG [clojure-agent-send-off-pool-9] p.c.vmfest Waiting 300000 ms for the IP in slot 0 of mygroup-2 to come up.
+2013-05-01 02:23:35,758 DEBUG [clojure-agent-send-off-pool-9] p.c.vmfest Waiting 300000 ms for the IP in slot 1 of mygroup-2 to come up.
+2013-05-01 02:23:49,862 INFO [clojure-agent-send-off-pool-9] p.c.vmfest Bootstrapping 192.168.56.106
+2013-05-01 02:23:49,887 ERROR [clojure-agent-send-off-pool-8] p.futures Start of node exception: Connection refused
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0-ea]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:578) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:527) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:423) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:207) ~[na:1.8.0-ea]
+	at com.jcraft.jsch.Util.createSocket(Util.java:338) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:194) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:162) ~[jsch-0.1.49.jar:na]
+	at clj_ssh.ssh$connect.invoke(ssh.clj:300) ~[na:na]
+	at pallet.execute$remote_sudo.invoke(execute.clj:332) ~[na:na]
+	at clojure.lang.Var.invoke(Var.java:427) ~[clojure-1.4.0.jar:na]
+	at pallet.compute.vmfest$ssh_script_on_target.invoke(vmfest.clj:200) ~[na:na]
+	at pallet.compute.vmfest$bootstrap_via_ssh.invoke(vmfest.clj:515) ~[na:na]
+	at pallet.compute.vmfest$create_node$fn__8596.invoke(vmfest.clj:569) ~[na:na]
+	at pallet.compute.vmfest$create_node.invoke(vmfest.clj:559) ~[na:na]
+	at pallet.compute.vmfest$parallel_create_nodes$iter__8656__8660$fn__8661$fn__8666.invoke(vmfest.clj:668) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) [clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) [clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:23:49,892 DEBUG [clojure-agent-send-off-pool-8] p.futures Start of node exception
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused
+	at com.jcraft.jsch.Util.createSocket(Util.java:344) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:194) ~[jsch-0.1.49.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:162) ~[jsch-0.1.49.jar:na]
+	at clj_ssh.ssh$connect.invoke(ssh.clj:300) ~[na:na]
+	at pallet.execute$remote_sudo.invoke(execute.clj:332) ~[na:na]
+	at clojure.lang.Var.invoke(Var.java:427) ~[clojure-1.4.0.jar:na]
+	at pallet.compute.vmfest$ssh_script_on_target.invoke(vmfest.clj:200) ~[na:na]
+	at pallet.compute.vmfest$bootstrap_via_ssh.invoke(vmfest.clj:515) ~[na:na]
+	at pallet.compute.vmfest$create_node$fn__8596.invoke(vmfest.clj:569) ~[na:na]
+	at pallet.compute.vmfest$create_node.invoke(vmfest.clj:559) ~[na:na]
+	at pallet.compute.vmfest$parallel_create_nodes$iter__8656__8660$fn__8661$fn__8666.invoke(vmfest.clj:668) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) [clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) [clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0-ea]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0-ea]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:578) ~[na:1.8.0-ea]
+	at java.net.Socket.connect(Socket.java:527) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:423) ~[na:1.8.0-ea]
+	at java.net.Socket.<init>(Socket.java:207) ~[na:1.8.0-ea]
+	at com.jcraft.jsch.Util.createSocket(Util.java:338) ~[jsch-0.1.49.jar:na]
+	... 16 common frames omitted
+2013-05-01 02:23:49,899 ERROR [nREPL-worker-2] p.futures Adjust node count exception: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+clojure.lang.ExceptionInfo: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+	at pallet.core$create_nodes.invoke(core.clj:847) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9803$fn__9804.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:23:49,901 DEBUG [nREPL-worker-2] p.futures Adjust node count exception
+clojure.lang.ExceptionInfo: throw+: {:message "No additional nodes could be started", :group {:packager :aptitude, :group-name :mygroup, :delta-count 1, :phases {:bootstrap #<automated_admin_user$automated_admin_user pallet.crate.automated_admin_user$automated_admin_user@c76425>}, :image {:os-family :ubuntu, :image-id "lubuntu"}, :count 1, :servers ()}, :type :pallet/could-not-start-new-nodes}
+	at pallet.core$create_nodes.invoke(core.clj:847) ~[na:na]
+	at pallet.core$adjust_node_count.invoke(core.clj:912) ~[na:na]
+	at pallet.core$parallel_adjust_node_counts$p_a_n_c_future__9803$fn__9804.invoke(core.clj:1003) ~[na:na]
+	at clojure.core$binding_conveyor_fn$fn__3989.invoke(core.clj:1819) ~[clojure-1.4.0.jar:na]
+	at clojure.lang.AFn.call(AFn.java:18) ~[clojure-1.4.0.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.8.0-ea]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.8.0-ea]
+	at java.lang.Thread.run(Thread.java:722) [na:1.8.0-ea]
+2013-05-01 02:23:49,901 DEBUG [nREPL-worker-2] p.core pallet version: 0.7.4
+2013-05-01 02:23:49,902 INFO [nREPL-worker-2] p.core lift-nodes phases [:settings :configure], groups [:mygroup]
+2013-05-01 02:23:49,902 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-settings for :mygroup
+2013-05-01 02:23:49,902 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-settings for :mygroup with 0 nodes
+2013-05-01 02:23:49,903 INFO [nREPL-worker-2] p.core parallel-apply-phase :settings for :mygroup
+2013-05-01 02:23:49,903 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :settings for :mygroup with 0 nodes
+2013-05-01 02:23:49,903 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-settings for :mygroup
+2013-05-01 02:23:49,903 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-settings for :mygroup with 0 nodes
+2013-05-01 02:23:49,903 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/pre-configure for :mygroup
+2013-05-01 02:23:49,904 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/pre-configure for :mygroup with 0 nodes
+2013-05-01 02:23:49,904 INFO [nREPL-worker-2] p.core parallel-apply-phase :configure for :mygroup
+2013-05-01 02:23:49,904 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :configure for :mygroup with 0 nodes
+2013-05-01 02:23:49,904 INFO [nREPL-worker-2] p.core parallel-apply-phase :pallet.phase/post-configure for :mygroup
+2013-05-01 02:23:49,904 INFO [nREPL-worker-2] p.core parallel-apply-phase-to-target :node  :pallet.phase/post-configure for :mygroup with 0 nodes
+2013-05-01 12:38:58,675 DEBUG [nREPL-worker-4] p.core pallet version: 0.7.4
+2013-05-01 12:38:58,675 INFO [nREPL-worker-4] p.core retrieving nodes
+2013-05-01 12:38:58,781 WARN [nREPL-worker-4] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 12:41:13,884 DEBUG [nREPL-worker-6] p.core pallet version: 0.7.4
+2013-05-01 12:41:13,884 INFO [nREPL-worker-6] p.core retrieving nodes
+2013-05-01 12:41:13,983 WARN [nREPL-worker-6] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 13:17:13,078 DEBUG [nREPL-worker-7] p.core pallet version: 0.7.4
+2013-05-01 13:17:13,079 INFO [nREPL-worker-7] p.core retrieving nodes
+2013-05-01 13:17:13,169 WARN [nREPL-worker-7] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 13:17:34,506 DEBUG [nREPL-worker-7] p.core pallet version: 0.7.4
+2013-05-01 13:17:34,506 INFO [nREPL-worker-7] p.core retrieving nodes
+2013-05-01 13:17:34,594 WARN [nREPL-worker-7] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
+2013-05-01 13:18:01,101 DEBUG [nREPL-worker-7] p.core pallet version: 0.7.4
+2013-05-01 13:18:01,102 INFO [nREPL-worker-7] p.core retrieving nodes
+2013-05-01 13:18:01,187 WARN [nREPL-worker-7] p.c.vmfest Cannot get os-family from node's metadata '{:image-id "lubuntu", :image-name "lubuntu", :uuid "/Users/niko/.vmfest/models/vmfest-lubuntu.vdi", :cpu-count 1, :network [{:host-only-interface "vboxnet0", :attachment-type :host-only} {:attachment-type :nat}], :storage [{:devices [nil nil {:device-type :dvd} nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}'. Trying to guess
