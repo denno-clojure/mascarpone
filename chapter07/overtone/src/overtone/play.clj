@@ -3,13 +3,15 @@
 (use 'overtone.live)
 
 (definst foo [] (saw 220))
+(foo)
 (kill foo)
 
 (definst bar [freq 220] (saw freq))
 (bar 110)
 (bar 220)
 
-(definst quux [freq 440] (* 0.3 (saw freq)))
+(definst quux [freq 440] 
+	(* 0.3 (saw freq)))
 (quux)
 (ctl quux :freq 660)
 
