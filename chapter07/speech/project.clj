@@ -4,7 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
-	[facts/speech-recognition "1.0.0"]
+	[hellonico/speech-recognition "1.0.2"]
 	[facts/speech-synthesis "1.0.0"]
 	[org.clojure/clojure "1.5.1"]])
 
