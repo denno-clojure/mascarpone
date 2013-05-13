@@ -35,4 +35,3 @@
 ; use partial function application to define a triad
 (def triad (partial chord 3))
 (def seventh_chord (partial chord 4))
-
