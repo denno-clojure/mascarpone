@@ -104,3 +104,327 @@ odoc
 (def guitar (sample (freesound-path 1399)))
 (guitar)
 (dotimes [i 10] (guitar))
+(use 'overtone.live)
+(demo 10 (lpf (saw 100) (mouse-x 40 5000 EXP)))
+(demo 10 (hpf (saw 100) (mouse-x 40 5000 EXP)))
+(definst foo [] (saw 220))
+(foo)
+(kill foo)
+(load-file "src/overtone/swing.clj")
+(kill)
+(kill metro)
+(kill swinger)
+(kill 1)
+(load-file "src/overtone/chords.clj")
+(use 'overtone.live)
+(definst saw-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
+     (saw freq)
+     vol))
+(saw-wave 440)
+(saw-wave 523.25)
+(saw-wave (midi->hz 69))
+(saw-wave (midi->hz (note :A4)))
+(defn note->hz [music-note]
+(midi->hz (note music-note)))
+(saw-wave (note->hz :C5))
+(defn saw2 [music-note]
+(saw-wave (midi->hz (note music-note))))
+(saw2 :A4)
+(saw2 :C5)
+(saw2 :C4)
+(defn play-chord [a-chord]
+  (doseq [note a-chord] (saw2 note)))
+(play-chord (chord :C4 :major))
+(defn chord-progression-time []
+  (let [time (now)]
+    (at time (play-chord (chord :C4 :major)))
+    (at (+ 2000 time) (play-chord (chord :G3 :major)))
+    (at (+ 3000 time) (play-chord (chord :F3 :sus4)))
+    (at (+ 4300 time) (play-chord (chord :F3 :major)))
+    (at (+ 5000 time) (play-chord (chord :G3 :major)))))
+(chord-progression-time)
+(defonce metro (metronome 120))
+(metro)
+(defn chord-progression-beat [m beat-num]
+  (at (m (+ 0 beat-num)) (play-chord (chord :C4 :major)))
+  (at (m (+ 4 beat-num)) (play-chord (chord :G3 :major)))
+  (at (m (+ 8 beat-num)) (play-chord (chord :A3 :minor)))
+  (at (m (+ 14 beat-num)) (play-chord (chord :F3 :major)))  
+)
+(chord-progression-beat metro (metro))
+(load-file "src/overtone/metronome")
+(load-file "src/overtone/metronome.clj")
+(def kick (sample (freesound-path 2086)))
+(def one-twenty-bpm (metronome 120))
+(defn looper [nome sound]    
+    (let [beat (nome)]
+        (at (nome beat) (sound))
+        (apply-at (nome (inc beat)) looper nome sound [])))
+(looper one-twenty-bpm kick)
+(stop)
+(looper one-twenty-bpm kick)
+(stop)
+(def kick2 (sample (freesound-path 2087)))
+(looper (metronome 60) kick2) 
+(looper one-twenty-bpm kick)
+(stop)
+(metronome 60)
+(first (metronome 60))
+(take 1 (metronome 60))
+(at (metronome 60) 4 kick)
+(at (metronome 60) 4 (kick))
+(at ((metronome 60) 4) (kick))
+(kill 142)
+(kill 1)
+(kill 2)
+(use 'overtone.samples.piano)
+(at ((metronome 60) 4) (kick))
+(at ((metronome 60) 1) (kick))
+(doc apply-at)
+(apply-at 2000 println 2 nil )
+(metronome 120)
+((metronome 120) 2)
+((metronome 120) 3)
+((metronome 120) 4)
+(apply-at ((metronome 120) 4) println 2 nil)
+(apply-at ((metronome 120) 4) println 2 [])
+(apply-at ((metronome 120) 4) kick 2 [])
+(apply-at ((metronome 120) 4) kick 1 [])
+(apply-at ((metronome 120) 4) '(kick) 1 [])
+(apply-at ((metronome 120) 4) (kick) 1 [])
+(apply-at ((metronome 120) 4) '(kick) 3 [])
+(kick)
+(use 'overtone.live)
+(kick)
+(def kick (sample (freesound-path 2086)))
+(kick)
+(def one-twenty-bpm (metronome 120))
+(apply-at ((metronome 120) 4) kick 2 [])
+(apply-at ((metronome 120) 4) kick nil [])
+(apply-at ((metronome 120) 4) kick 1 [])
+(apply-at ((metronome 120) 4) kick 2 [])
+(apply-at ((metronome 120) 4) kick 3 [])
+(apply-at ((metronome 120) 4) kick 4 [])
+(kick 4)
+(kick 3)
+(kick 2)
+(looper one-twenty-bpm kick)
+(defn looper [nome sound]    
+    (let [beat (nome)]
+        (at (nome beat) (sound))
+        (apply-at (nome (inc beat)) looper nome sound [])))
+(looper one-twenty-bpm kick)
+(looper one-twenty-bpm (partial kick 2))
+(kill 44)
+(stop)
+(looper one-twenty-bpm kick)
+(stop)
+(looper one-twenty-bpm kick)
+(def kick2 (kick 2))
+(kick2)
+kick2
+(kick 2)
+kick2
+(looper (metronome 60) kick)
+(kill 135)
+(stop)
+(load-file "src/overtone/swing.clj")
+(kill 1)
+(stop)
+(load-file "src/overtone/swing.clj")
+(stop 1)
+(stop)
+(stop 1)
+(load-file "src/overtone/chords.clj")
+(stop)
+(demo 10 (lpf (saw 100) (mouse-x 40 5000 EXP)))
+(demo 30 (bpf (saw 100) (mouse-x 40 5000 EXP) (mouse-y 0.01 1 LIN)))
+(load-file "src/overtone/first.clj")
+(looper one-twenty-bpm kick)
+(demo 30 (bpf (saw 100) (mouse-x 40 5000 EXP) (mouse-y 0.01 1 LIN)))
+(stop)
+(let [freq 220]
+   (demo (pluck (* (white-noise) (env-gen (perc 0.001 2) :action FREE)) 1 3 (/ 1 freq))))
+(let [freq 220]
+   (demo (pluck (* (white-noise) (env-gen (perc 0.001 2) :action FREE)) 1 3 (/ 1 freq))))
+(demo 10 (lpf (saw 100) (mouse-x 40 5000 EXP)))
+(demo 30 (bpf (saw 100) (mouse-x 40 5000 EXP) (mouse-y 0.01 1 LIN)))
+(doc definst)
+(defsynth left-sine [] (out 0 (sin-osc)))
+(left-sine)
+(stop)
+(demo 10 (let [r (impulse:kr 10)
+               c (t-rand:kr :lo 100, :hi 5000, :trig r)
+               m (t-rand:kr :lo 100, :hi 5000, :trig r)]
+           (* [0.3 0.3] (pm-osc c m 12 0))))
+(demo 5 (let [speed (+ 1 (* 0.2 (lf-noise0:kr 12)))
+              direction (lf-clip-noise:kr 1/3)]
+          (play-buf 1 houston (* speed direction) :loop 1)))
+(definst c-hat [amp 0.8 t 0.04]
+  (let [env (env-gen (perc 0.001 t) 1 1 0 1 FREE)
+        noise (white-noise)
+        sqr (* (env-gen (perc 0.01 0.04)) (pulse 880 0.2))
+        filt (bpf (+ sqr noise) 9000 0.5)]
+    (* amp env filt)))
+(c-hat)
+(c-hat 2)
+(c-hat 2 1)
+(c-hat 2 2)
+(doc *)
+(doc definst)
+(load-file "src/overtone/guitar.clj")
+(guitar-strum g :E :down 0.25)
+(ns overtone.examples.instruments.guitar-synth)
+g
+(guitar-strum g :E :down 0.25)
+(guitar-strum g :F :down 0.25)
+(guitar-strum g :E :up 0.25)
+(guitar-strum g :F :up 0.25)
+(guitar-strum g :C :down 0.25)
+(ddd0)
+(ddd1)
+(ddd0)
+(play1)
+(doall
+ (let [metro (metronome 100)]
+   (play1 metro 0 4 [:C :G :Am :F])))
+(stop)
+(doall
+ (let [metro (metronome 132)]
+   (play1 metro 0 1 [:C :G :Am :F])
+   (play1 metro 4 1 [:Am :F :C :G])
+   (play1 metro 8 1 [:C :G :Am :F])
+   (play1 metro 12 1 [:C :G :Em :C])
+   ))
+(stop)
+(start)
+(ctl g :pre-amp 4.0 :distort 0.99)
+(use 'overtone.live)
+(def a (buffer 2048))
+(def b (buffer 2048))
+(demo 10
+      (let [input (sound-in) ; mic
+            src (white-noise) ; synth - try replacing this with other sound sources
+            formed (pv-mul (fft a input) (fft b src))
+            audio (ifft formed)]
+        (pan2 (* 0.1 audio))))
+*1
+(def a (buffer 2048))
+(def b (buffer 2048))
+(demo 10
+      (let [input (sound-in) ; mic
+            src (white-noise) ; synth - try replacing this with other sound sources
+            formed (pv-mul (fft a input) (fft b src))
+            audio (ifft formed)]
+        (pan2 (* 0.1 audio))))
+(do ;; knocking on heaven's door
+  (let [metro (metronome 100)]
+    (doall
+     (doseq [[i c] (map-indexed vector [:Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Cadd9 :Cadd9])]
+       (strum-pattern g metro i c "d-du-udu")))))
+(ns overtone.examples.instruments.guitar-synth
+  ^{:doc "Guitar from overtone.synth.stringed usage examples"
+    :author "Roger Allen"}
+  (:use [overtone.live]
+        [overtone.synth.stringed]))
+(do ;; knocking on heaven's door
+  (let [metro (metronome 100)]
+    (doall
+     (doseq [[i c] (map-indexed vector [:Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Cadd9 :Cadd9])]
+       (strum-pattern g metro i c "d-du-udu")))))
+(defn pattern-to-beat-strum-seq
+  "given a string describing a one-measure up/down strum pattern like
+'ud-udu-', return a sequence of vector [beats :up/:down] pairs"
+  [cur-pattern]
+  (let [strums-per-measure (count cur-pattern)
+        beats-per-measure 4.0
+        beats-per-strum (/ beats-per-measure strums-per-measure)
+        ud-keywords {\u :up, \d :down}]
+    (for [[i s] (map-indexed vector cur-pattern)]
+      (when (contains? ud-keywords s)
+        [(* i beats-per-strum) (ud-keywords s)]))))
+(defn strum-pattern [the-guitar metro cur-measure cur-chord cur-pattern]
+  (let [cur-beat (* 4 cur-measure)]
+    (doall
+     (doseq [[b d] (pattern-to-beat-strum-seq cur-pattern)]
+       (when-not (= b nil)
+         (guitar-strum the-guitar cur-chord d 0.07 (metro (+ b cur-beat))))))))
+(do ;; knocking on heaven's door
+  (let [metro (metronome 100)]
+    (doall
+     (doseq [[i c] (map-indexed vector [:Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Cadd9 :Cadd9])]
+       (strum-pattern g metro i c "d-du-udu")))))
+(def g (guitar))
+(do ;; knocking on heaven's door
+  (let [metro (metronome 100)]
+    (doall
+     (doseq [[i c] (map-indexed vector [:Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Am :Am
+                                        :Gadd5 :Dsus4 :Cadd9 :Cadd9])]
+       (strum-pattern g metro i c "d-du-udu")))))
+(ctl g :pre-amp 5.0 :distort 0.96
+     :lp-freq 5000 :lp-rq 0.25
+     :rvb-mix 0.5 :rvb-room 0.7 :rvb-damp 0.4)
+(defn ddd0 []
+  (let [t (now) dt 250]
+    (guitar-strum g [-1 0 2 2 2 -1] :down 0.01 (+ t (* 0 dt)))
+    (guitar-strum g [-1 0 2 2 2 -1] :up 0.01 (+ t (* 1 dt)))
+    (guitar-strum g [-1 0 2 2 2 -1] :down 0.01 (+ t (* 2 dt) 50))
+    (guitar-strum g [-1 -1 -1 -1 -1 -1] :down 0.01 (+ t (* 3.5 dt)))))
+(defn ddd1 []
+  (let [t (now) dt 250]
+    (guitar-strum g [ 2 -1 0 2 3 -1] :down 0.01 (+ t (* 0 dt)))
+    (guitar-strum g [ 2 -1 0 2 3 -1] :up 0.01 (+ t (* 1 dt)))
+    (guitar-strum g [ 3 -1 0 0 3 -1] :down 0.01 (+ t (* 2 dt) 50))
+    (guitar-strum g [-1 -1 -1 -1 -1 -1] :down 0.01 (+ t (* 3.5 dt)))))
+(defn ddd2 []
+  (let [t (now) dt 250]
+    (guitar-strum g [ 2 -1 0 2 3 -1] :down 0.01 (+ t (* 0 dt)))
+    (guitar-strum g [-1 -1 -1 -1 -1 -1] :down 0.01 (+ t (* 1.5 dt)))
+    (guitar-strum g [-1 0 2 2 2 -1] :down 0.01 (+ t (* 2 dt)))
+    (guitar-strum g [-1 0 2 2 2 -1] :up 0.01 (+ t (* 3 dt)))
+    (guitar-strum g [-1 -1 -1 -1 -1 -1] :down 0.01 (+ t (* 4.5 dt)))))
+(ddd0)
+(ddd1)
+(ddd0)
+(ddd2)
+(guitar-strum g [-1 0 2 2 2 -1] :down 0.01)
+(guitar-strum g [-1 0 2 2 3 -1] :down 0.01)
+(guitar-strum g [-1 0 2 2 2 -1] :down 0.01)
+(guitar-strum g :E :down 0.25)
+(guitar-strum g [0 2 2 -1 -1 -1])
+(ctl g :pre-amp 4.0 :distort 0.99)
+(guitar-strum g [0 2 2 -1 -1 -1])
+(guitar-strum g [0 2 2 1 -1 -1])
+(guitar-strum g [0 2 2 2 -1 -1])
+(guitar-strum g [0 2 2 1 -1 -1])
+(load-file "src/overtone/acdc.clj")
+(ddd0)
+(ddd1)
+(ddd2)
+(load-file "src/overtone/acdc.clj")
+(definst foo [] (saw 220))
+(foo)
+(kill)
+(kill foo)
+(definst trem [freq 440 depth 10 rate 6 length 3]
+    (* 0.3
+       (line:kr 0 1 length FREE)
+       (saw (+ freq (* depth (sin-osc:kr rate))))))
+(trem)
+(trem 200 60 )
+(doc definst)
+(definst saw-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
+     (saw freq)
+     vol))
+(saw-wave 200)
+(saw-wave 440)
+(saw-wave 440 0.02)
