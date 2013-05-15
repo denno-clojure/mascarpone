@@ -1,0 +1,14 @@
+data/src/simplecl/utils.clj.i
+data/resources/kernels/physics.cl.i
+data/resources/kernels/debug.cl.i
+data/src/simplecl/ops.clj.i
+data/.flow.i
+data/project.clj.i
+data/test/simplecl/debug_test.clj.i
+data/pom.xml.i
+data/.hgtags.i
+data/.hgignore.i
+data/test/simplecl/verlet_test.clj.i
+data/src/simplecl/core.clj.i
+data/export/.empty.i
+data/README.md.i

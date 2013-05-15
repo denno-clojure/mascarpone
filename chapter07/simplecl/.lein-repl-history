@@ -1,0 +1,3 @@
+(load-file "test/simplecl/debug_test.clj")
+(load-file "test/simplecl/verlet_test.clj")
+(load-file "test/simplecl/debug_test.clj")
