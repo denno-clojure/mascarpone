@@ -1,0 +1,1 @@
+lein with-profile test run -m simplecl.verlet-test
