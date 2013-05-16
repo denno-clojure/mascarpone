@@ -1,0 +1,31 @@
+(load-file "resources/examples/face_detect.clj")
+(face-detect/stop)
+(display-webcam/stop)
+(load-file "resources/examples/display_webcam.clj")
+(load-file "resources/examples/bouding_box.clj")
+(load-file "resources/examples/bounding_box.clj")
+(load-file "resources/examples/display_webcam.clj")
+(load-file "resources/examples/robocup_id.clj")
+(load-file "resources/examples/segmentaion.clj")
+(load-file "resources/examples/display_webcam.clj")
+(load-file "resources/examples/optimal_flow.clj")
+(load-file "resources/examples/optical_flow.clj")
+(load-file "resources/examples/segmentaion.clj")
+(load-file "resources/examples/face.clj")
+(load-file "resources/examples/lane.clj")
+(convert-color *1 :bgr-gray)
+(use 'vision.core)
+(ns display-webcam
+  (:use [vision core] :reload-all))
+(let [state (ref true)]
+  
+  (defn start []
+    (let [capture (capture-from-cam 0)]
+      (dosync (ref-set state true))
+      (future
+       (while @state
+         (view :cam (query-frame capture)))
+       (release capture))))
+  (defn stop []
+    (dosync (ref-set state false))))
+(load-file "src/display_webcam.clj")

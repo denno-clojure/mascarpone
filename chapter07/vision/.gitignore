@@ -1,0 +1,14 @@
+*.jar
+*.dylib
+*.so
+*.cmake
+*.exe
+*.a
+*.dll
+Makefile
+CMakeFiles
+CMakeCache.txt
+resources/lib/calibrate_cam
+/target
+pom.xml
+./target/
