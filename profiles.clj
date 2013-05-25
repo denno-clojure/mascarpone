@@ -1,4 +1,5 @@
 {:user {:plugins [
+				  [lein-clr "0.2.0"]
  				  [lein-droid/lein-droid "0.1.0-SNAPSHOT"]
                   ;[lein-beanstalk "0.2.7"]
                   ;[gaeshi/lein-gaeshi "0.10.0"]
