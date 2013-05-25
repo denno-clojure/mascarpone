@@ -1,0 +1,16 @@
+# server-stats
+
+This is a micro-framework for writing ssh-based commands written in Clojure. Similar to python's Fabric.
+## Usage
+
+1) lein uberjar
+2) Define your commands/alerts in server-stats.cfg (look at the sample one)
+3) java -jar serverStats-0.1-standalone.jar (this will print a man page, use -a to enable alerts)
+
+For more info look at http://info.rjmetrics.com/blog/bid/54114/Parallel-SSH-and-system-monitoring-in-Clojure
+
+## License
+
+Copyright (C) 2011 RJMetrics
+
+Distributed under the Eclipse Public License, the same as Clojure.
