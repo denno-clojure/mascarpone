@@ -17,6 +17,6 @@
             (.addComponent 
               (doto (Button. "button")
                 (.addListener 
-					(proxy [Button$ClickListener] []
+					         (proxy [Button$ClickListener] []
                         (buttonClick [event] (. (. app (getMainWindow)) 
 							(showNotification "Time for sushi")))))))))))))
