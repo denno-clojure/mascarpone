@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <!-- ClojureScript -->
+    <script src="/js/main.js"></script> 
+    <style>
+      <clj>
+        (println
+         (css [:body
+               {:background "#666"
+                :text-align :center
+                :margin-left :auto
+                :maring-right :auto}])
+         (css
+              [:h1
+               {:color "#FFF"}])
+         (css [:a {:color "#FA0"
+                   :font-size :40px}]))
+      </clj>
+    </style>
+  </head>
+  <body>
+    <h1>
+      <clj>
+	(println "ClojureHomePage Framework on Clojure " (clojure-version))
+      </clj>
+    </h1>
+    <a onclick="main.clojurescript()">Click me for ClojureScript action</a>
+  </body>
+</html>
