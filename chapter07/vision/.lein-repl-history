@@ -29,3 +29,5 @@
   (defn stop []
     (dosync (ref-set state false))))
 (load-file "src/display_webcam.clj")
+(display-webcam/strat)
+(display-webcam/start)
