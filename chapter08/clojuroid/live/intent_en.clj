@@ -12,4 +12,4 @@
 		(.startActivity a intent)))
 
 ; call domino pizza
-(call-number "03-3583-2266")
+(call-number "03-9999-9999")
